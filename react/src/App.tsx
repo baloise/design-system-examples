@@ -1,8 +1,19 @@
-import React from 'react'
-import { BalApp, BalButton, BalCard, BalCardContent } from '@baloise/design-system-components-react'
-import './App.scss'
+import React from "react";
+import {
+  BalApp,
+  BalButton,
+  BalCard,
+  BalCardContent,
+} from "@baloise/design-system-components-react";
+import "./App.scss";
+
+import { useBaloiseDesignSystem } from "@baloise/design-system-components-react";
 
 function App() {
+  useBaloiseDesignSystem({
+    applyPolyfills: false,
+  });
+
   return (
     <BalApp background>
       <main className="container">
@@ -10,15 +21,17 @@ function App() {
           <BalCardContent>
             <BalButton>Button</BalButton>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates nesciunt facilis ex animi molestiae
-              harum cupiditate aliquid corrupti blanditiis voluptas? Omnis voluptate necessitatibus adipisci esse
-              voluptatibus debitis officia ipsam vero.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates nesciunt facilis ex animi molestiae harum cupiditate
+              aliquid corrupti blanditiis voluptas? Omnis voluptate
+              necessitatibus adipisci esse voluptatibus debitis officia ipsam
+              vero.
             </p>
           </BalCardContent>
         </BalCard>
       </main>
     </BalApp>
-  )
+  );
 }
 
-export default App
+export default App;

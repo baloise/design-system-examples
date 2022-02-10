@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-$font-path: '~assets/fonts';
+$font-path: "~assets/fonts";
+$blue: yellow;
 
-@import 'node_modules/@baloise/design-system-components/src/styles/global.scss';
-@import 'node_modules/@baloise/design-system-components-table/scss/design-system-table.scss';
+@import "node_modules/@baloise/design-system-components/src/styles/global.scss";
+@import "node_modules/@baloise/design-system-components-table/scss/design-system-table.scss";

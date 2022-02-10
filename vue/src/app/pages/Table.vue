@@ -1,41 +1,33 @@
-<template>
-  <bal-card class="mt-6">
-    <bal-card-content>
-      <bal-heading space="bottom">Table</bal-heading>
-
-      <AgGridVue
-        style="width: 500px; height: 300px"
-        class="ag-theme-alpine"
-        :columnDefs="columnDefs"
-        :rowData="rowData"
-        :modules="modules"
-      ></AgGridVue>
-    </bal-card-content>
-  </bal-card>
-</template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { onBeforeMount, ref } from 'vue'
+import { BalCard, BalHeading } from '@baloise/design-system-components-vue'
 import { AgGridVue } from '@ag-grid-community/vue3'
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model'
 
-export default defineComponent({
-  components: { AgGridVue },
-  data() {
-    return {
-      columnDefs: null as any,
-      rowData: null as any,
-      modules: [ClientSideRowModelModule],
-    }
-  },
-  beforeMount() {
-    this.columnDefs = [{ field: 'make' }, { field: 'model' }, { field: 'price' }]
+const columnDefs = ref<any>(null)
+const rowData = ref<any>(null)
+const modules = ref([ClientSideRowModelModule])
 
-    this.rowData = [
-      { make: 'Toyota', model: 'Celica', price: 35000 },
-      { make: 'Ford', model: 'Mondeo', price: 32000 },
-      { make: 'Porsche', model: 'Boxter', price: 72000 },
-    ]
-  },
+onBeforeMount(() => {
+  columnDefs.value = [{ field: 'make' }, { field: 'model' }, { field: 'price' }]
+
+  rowData.value = [
+    { make: 'Toyota', model: 'Celica', price: 35000 },
+    { make: 'Ford', model: 'Mondeo', price: 32000 },
+    { make: 'Porsche', model: 'Boxter', price: 72000 },
+  ]
 })
 </script>
+
+<template>
+  <BalCard class="mt-6 p-5">
+    <BalHeading title level="h4" space="bottom">Table</BalHeading>
+    <AgGridVue
+      style="width: 100%; height: 300px"
+      class="ag-theme-alpine"
+      :columnDefs="columnDefs"
+      :rowData="rowData"
+      :modules="modules"
+    ></AgGridVue>
+  </BalCard>
+</template>

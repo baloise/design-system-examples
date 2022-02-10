@@ -1,38 +1,28 @@
-<template>
-  <h2 class="title is-size-2">{{ title }}</h2>
-  <p>{{ message }}</p>
-  <BalButton @click="onClick($event)">Click Me</BalButton>
-</template>
-
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
+<script setup lang="ts">
+import { computed, defineEmits, defineProps } from 'vue'
 import { BalButton } from '@baloise/design-system-components-vue'
+
+const props = defineProps({
+  message: {
+    type: String,
+    required: true,
+  },
+})
 
 export type onConfirm = (value: string) => void
 
-type HelloWorldEmitters = {
+const emits = defineEmits({
+  onConfirm: () => true,
+} as {
   onConfirm: onConfirm
-}
-
-export default defineComponent({
-  props: {
-    message: {
-      type: String,
-      required: true,
-    },
-  },
-  emits: {
-    onConfirm: () => true,
-  } as HelloWorldEmitters,
-  setup(props, { emit }) {
-    const title = computed(() => 'Hello ' + props.message)
-
-    const onClick = () => {
-      emit('onConfirm', props.message)
-    }
-
-    return { title, onClick }
-  },
-  components: { BalButton },
 })
+
+const title = computed(() => 'Hello ' + props.message)
+
+const onClick = () => emits('onConfirm', props.message)
 </script>
+
+<template>
+  <h2 class="title is-size-2">{{ title }}</h2>
+  <BalButton @click="onClick()">Click Me</BalButton>
+</template>

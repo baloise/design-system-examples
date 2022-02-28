@@ -1,66 +1,60 @@
-<bal-app background has-sticky-footer>
+<bal-app class="has-sticky-footer">
   <header>
-    <bal-navbar no-burger>
+    <bal-navbar simple>
       <bal-navbar-brand>
-        <bal-icon name="logo" inverted size="large"></bal-icon>
-        <bal-text class="ml-3" bold>Open X Day Demo</bal-text>
+        <bal-logo color="white"></bal-logo>
+        <bal-text bold>Demo</bal-text>
       </bal-navbar-brand>
     </bal-navbar>
-    <div class="has-background-white">
-      <div class="container">
-        <bal-tabs>
-          <bal-tab-item
-            value="form"
-            label="Form"
-            routerLinkActive="form"
-            (balNavigate)="navigateTo('form')"
-            [active]="isTabActive('form')"
-          ></bal-tab-item>
-          <bal-tab-item
-            value="table"
-            label="Table"
-            (balNavigate)="navigateTo('table')"
-            [active]="isTabActive('table')"
-          ></bal-tab-item>
-          <bal-tab-item
-            value="modal"
-            label="Modal"
-            (balNavigate)="navigateTo('modal')"
-            [active]="isTabActive('modal')"
-          ></bal-tab-item>
-          <bal-tab-item
-            value="pipes"
-            label="Pipes"
-            (balNavigate)="navigateTo('pipes')"
-            [active]="isTabActive('pipes')"
-          ></bal-tab-item>
-          <bal-tab-item
-            value="services"
-            label="Services"
-            (balNavigate)="navigateTo('services')"
-            [active]="isTabActive('services')"
-          ></bal-tab-item>
-          <bal-tab-item
-            value="shared"
-            label="Shared"
-            (balNavigate)="navigateTo('shared')"
-            [active]="isTabActive('shared')"
-          ></bal-tab-item>
-        </bal-tabs>
-      </div>
-    </div>
+    <bal-stage color="blue" size="medium">
+      <bal-stage-image
+        src="https://www.baloise.com/.imaging/mte/baloise-theme/2880/dam/baloise-com/images/ueber-uns/wer-wir-sind/bilder-logos/frau-fotoapparat.jpg/jcr:content/frau-fotoapparat.jpg"
+      ></bal-stage-image>
+      <bal-stage-body>
+        <bal-heading space="none">{{ getWelcomeTitle() }}</bal-heading>
+        <bal-heading space="none" subtitle level="h2"
+          >To the Baloise Design System</bal-heading
+        >
+      </bal-stage-body>
+    </bal-stage>
   </header>
-  <main>
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
+  <main class="container is-compact">
+    <bal-card class="mt-6">
+      <bal-card-title>Contact Form</bal-card-title>
+      <bal-card-subtitle>A little form example</bal-card-subtitle>
+      <bal-card-content>
+        <div class="columns mt-4">
+          <bal-field class="column is-half py-0" required>
+            <bal-field-label required>Firstname</bal-field-label>
+            <bal-field-control>
+              <bal-input
+                name="firstname"
+                placeholder="Enter your firstname"
+                required
+                [value]="firstname"
+                (balInput)="firstnameChanged($event.detail?.toString())"
+              ></bal-input>
+            </bal-field-control>
+          </bal-field>
+          <bal-field class="column is-half py-0" required>
+            <bal-field-label required>Lastname</bal-field-label>
+            <bal-field-control>
+              <bal-input
+                name="lastname"
+                placeholder="Enter your lastname"
+                required
+                [value]="lastname"
+                (balInput)="lastnameChanged($event.detail?.toString())"
+              ></bal-input>
+            </bal-field-control>
+          </bal-field>
+        </div>
+      </bal-card-content>
+      <bal-card-actions position="right">
+        <bal-button color="primary" (click)="submit()">Submit</bal-button>
+        <bal-button color="link" (click)="cancel()">Cancel</bal-button>
+      </bal-card-actions>
+    </bal-card>
   </main>
-  <bal-footer>
-    <div class="container">
-      <span class="mr-3">Baloise Group</span>
-      <span class="mr-3">Legal notice</span>
-      <span class="mr-3">Cookie policy</span>
-      <span>Data protection</span>
-    </div>
-  </bal-footer>
+  <bal-footer></bal-footer>
 </bal-app>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "design-system-ng-demo": {
+    "angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/design-system-ng-demo",
+            "outputPath": "dist/angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -33,19 +33,15 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "allowedCommonJsDependencies": [
-              "lodash",
-              "query-string"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -76,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "design-system-ng-demo:build:production"
+              "browserTarget": "angular:build:production"
             },
             "development": {
-              "browserTarget": "design-system-ng-demo:build:development"
+              "browserTarget": "angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "design-system-ng-demo:build"
+            "browserTarget": "angular:build"
           }
         },
         "test": {
@@ -111,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "design-system-ng-demo"
+  "defaultProject": "angular"
 }

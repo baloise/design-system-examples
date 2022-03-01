@@ -12,6 +12,7 @@ import {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  title = 'Welcome';
   firstname?: string;
   lastname?: string;
   language: BalSwissLanguage = 'en';
@@ -19,20 +20,22 @@ export class AppComponent {
   constructor(private toast: BalToastService) {
     onBalConfigChange((config: BalConfigState) => {
       this.language = config.language as BalSwissLanguage;
-    });
-  }
 
-  getWelcomeTitle() {
-    switch (this.language) {
-      case 'en':
-        return 'Welcome';
-      case 'de':
-        return 'Willkommen';
-      case 'it':
-        return 'Benvenuta';
-      default:
-        return 'Bienvenue';
-    }
+      switch (this.language) {
+        case 'de':
+          this.title = 'Willkommen';
+          break;
+        case 'it':
+          this.title = 'Benvenuta';
+          break;
+        case 'fr':
+          this.title = 'Bienvenue';
+          break;
+        default:
+          this.title = 'Welcome';
+          break;
+      }
+    });
   }
 
   firstnameChanged(value?: string) {
@@ -49,9 +52,17 @@ export class AppComponent {
   }
 
   submit() {
-    this.toast.create({
-      message: `Form was submitted to ${this.firstname} ${this.lastname}`,
-      color: 'success',
-    });
+    if(this.firstname && this.lastname) {
+      this.toast.create({
+        message: `Form was submitted to ${this.firstname} ${this.lastname}`,
+        color: 'success',
+      });
+    }else {
+      this.toast.create({
+        message: `Could not find any first or lastname!`,
+        color: 'danger',
+      });
+    }
+
   }
 }

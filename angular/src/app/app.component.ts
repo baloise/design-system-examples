@@ -52,17 +52,16 @@ export class AppComponent {
   }
 
   submit() {
-    if(this.firstname && this.lastname) {
+    if (this.firstname && this.lastname) {
       this.toast.create({
         message: `Form was submitted to ${this.firstname} ${this.lastname}`,
         color: 'success',
       });
-    }else {
+    } else {
       this.toast.create({
         message: `Could not find any first or lastname!`,
         color: 'danger',
       });
     }
-
   }
 }

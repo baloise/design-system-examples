@@ -1,28 +1,21 @@
 import React, { useState } from "react";
 import "./App.scss";
-
-// import { BalButton } from "./lib";
-// import { useBaloiseDesignSystem } from "./lib";
-import { MyComponent } from "./src";
+import {
+  useBaloiseDesignSystem,
+  BalButton,
+  BalApp,
+} from "@baloise/design-system-components-react";
 
 function App() {
-  // useBaloiseDesignSystem();
-
+  useBaloiseDesignSystem();
   const [count, setCount] = useState(0);
-  // const [color, setColor] = useState('info');
-
   return (
-    <div className="bal-app">
+    <BalApp>
       <main className="container">
-        {/* <BalButton color={color as any}>{count}</BalButton> */}
-        <h1 className="has-background-pink">Bubub</h1>
-        <MyComponent>
-          <MyComponent>{count}</MyComponent>
-        </MyComponent>
+        <BalButton>{count}</BalButton>
         <button onClick={() => setCount(count + 1)}>Counter</button>
-        {/* <button onClick={() => setColor('danger')}>Color</button> */}
       </main>
-    </div>
+    </BalApp>
   );
 }
 

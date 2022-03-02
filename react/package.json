@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@baloise/design-system-components": "^10.2.0",
+    "@baloise/design-system-components-react": "^10.2.1-beta.11",
     "@duetds/css": "^1.7.12",
     "@duetds/tokens": "^2.4.12",
     "@testing-library/jest-dom": "^5.11.4",

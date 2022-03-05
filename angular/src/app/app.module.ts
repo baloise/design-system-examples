@@ -14,12 +14,20 @@ import {
   BalFieldModule,
   BalInputModule,
   BalToastModule,
-  BalNoticesModule,
+  BalSelectModule,
 } from '@baloise/design-system-components-angular';
 import { AppComponent } from './app.component';
+import { PropertyComponent } from './property/property.component';
+import { EventComponent } from './event/event.component';
+import { MethodComponent } from './method/method.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    PropertyComponent,
+    EventComponent,
+    MethodComponent,
+  ],
   imports: [
     BrowserModule,
     CommonModule,
@@ -42,7 +50,7 @@ import { AppComponent } from './app.component';
     BalFieldModule,
     BalInputModule,
     BalToastModule,
-    BalNoticesModule,
+    BalSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

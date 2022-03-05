@@ -12,9 +12,9 @@
       ></bal-stage-image>
       <bal-stage-body>
         <div class="container is-compact">
-          <bal-heading space="none" data-testid="welcome-title"
-            >{{ title }} {{ firstname }}</bal-heading
-          >
+          <bal-heading space="none" data-testid="welcome-title">{{
+            title
+          }}</bal-heading>
           <bal-heading space="none" subtitle level="h2">
             To the Baloise Design System
           </bal-heading>
@@ -24,49 +24,33 @@
   </header>
   <main class="container is-compact">
     <bal-card class="mt-6">
-      <bal-card-title>Contact Form</bal-card-title>
-      <bal-card-subtitle>A little form example</bal-card-subtitle>
+      <bal-card-title>Property example</bal-card-title>
+      <bal-card-subtitle>
+        A little demonstration how to change properties of our
+        components</bal-card-subtitle
+      >
       <bal-card-content>
-        <div class="columns mt-4">
-          <bal-field class="column is-half py-0" required>
-            <bal-field-label required>Firstname</bal-field-label>
-            <bal-field-control>
-              <bal-input
-                data-testid="input-firstname"
-                name="firstname"
-                placeholder="Enter your firstname"
-                required
-                [value]="firstname"
-                (balInput)="firstnameChanged($event.detail)"
-              ></bal-input>
-            </bal-field-control>
-          </bal-field>
-          <bal-field class="column is-half py-0" required>
-            <bal-field-label required>Lastname</bal-field-label>
-            <bal-field-control>
-              <bal-input
-                data-testid="input-lastname"
-                name="lastname"
-                placeholder="Enter your lastname"
-                required
-                [value]="lastname"
-                (balInput)="lastnameChanged($event.detail)"
-              ></bal-input>
-            </bal-field-control>
-          </bal-field>
-        </div>
+        <app-property></app-property>
       </bal-card-content>
-      <bal-card-actions position="right">
-        <bal-button
-          color="primary"
-          (click)="submit()"
-          data-testid="button-submit"
-          >Submit</bal-button
-        >
-        <bal-button color="link" (click)="cancel()" data-testid="button-cancel"
-          >Cancel</bal-button
-        >
-      </bal-card-actions>
+    </bal-card>
+    <bal-card class="mt-6">
+      <bal-card-title>Event example</bal-card-title>
+      <bal-card-subtitle>
+        A short example how to use the events of our
+        components</bal-card-subtitle
+      >
+      <bal-card-content>
+        <app-event></app-event>
+      </bal-card-content>
+    </bal-card>
+    <bal-card class="mt-6">
+      <bal-card-title>Method example</bal-card-title>
+      <bal-card-subtitle>
+        A tiny use case of how to call the components methods</bal-card-subtitle
+      >
+      <bal-card-content>
+        <app-method></app-method>
+      </bal-card-content>
     </bal-card>
   </main>
   <bal-footer></bal-footer>

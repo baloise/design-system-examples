@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { BalToastService } from '@baloise/design-system-components-angular';
 import { BalSwissLanguage } from '@baloise/design-system-components';
 import {
   onBalConfigChange,
@@ -13,11 +12,9 @@ import {
 })
 export class AppComponent {
   title = 'Welcome';
-  firstname?: string;
-  lastname?: string;
   language: BalSwissLanguage = 'en';
 
-  constructor(private toast: BalToastService) {
+  constructor() {
     onBalConfigChange((config: BalConfigState) => {
       this.language = config.language as BalSwissLanguage;
 
@@ -36,32 +33,5 @@ export class AppComponent {
           break;
       }
     });
-  }
-
-  firstnameChanged(value?: string) {
-    this.firstname = value;
-  }
-
-  lastnameChanged(value?: string) {
-    this.lastname = value;
-  }
-
-  cancel() {
-    this.firstname = undefined;
-    this.lastname = undefined;
-  }
-
-  submit() {
-    if (this.firstname && this.lastname) {
-      this.toast.create({
-        message: `Form was submitted to ${this.firstname} ${this.lastname}`,
-        color: 'success',
-      });
-    } else {
-      this.toast.create({
-        message: `Could not find any first or lastname!`,
-        color: 'danger',
-      });
-    }
   }
 }

@@ -1,0 +1,19 @@
+<form *ngIf="form" [formGroup]="form">
+  <bal-field>
+    <bal-field-control>
+      <bal-input formControlName="name"></bal-input>
+    </bal-field-control>
+  </bal-field>
+  <bal-field class="is-one-third" expanded>
+    <bal-field-control>
+      <bal-select data-test-id="status-dropdown" expanded formControlName="status">
+        <bal-select-option *ngFor="let status of statusOptions"
+                           [id]="'status-' + status.toLowerCase()"
+                           [label]="status"
+                           [value]="status">
+          {{ status}}
+        </bal-select-option>
+      </bal-select>
+    </bal-field-control>
+  </bal-field>
+</form>

@@ -1,9 +1,6 @@
-import { Component } from '@angular/core';
-import { BalSwissLanguage } from '@baloise/design-system-components';
-import {
-  onBalConfigChange,
-  BalConfigState,
-} from '@baloise/design-system-components';
+import {Component} from '@angular/core';
+import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-components';
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -13,6 +10,7 @@ import {
 export class AppComponent {
   title = 'Welcome';
   language: BalSwissLanguage = 'en';
+  form = new FormGroup({name: new FormControl('Example name'), status: new FormControl('Hans Muster')});
 
   constructor() {
     onBalConfigChange((config: BalConfigState) => {

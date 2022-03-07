@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
 import { PropertyComponent } from './property/property.component';
 import { EventComponent } from './event/event.component';
 import { MethodComponent } from './method/method.component';
+import {DumbComponentComponent} from "./dumb-component/dumb-component.component";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MethodComponent } from './method/method.component';
     PropertyComponent,
     EventComponent,
     MethodComponent,
+    DumbComponentComponent
   ],
   imports: [
     BrowserModule,

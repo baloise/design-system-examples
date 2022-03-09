@@ -60,19 +60,12 @@
 
   function main() {
     if (!isSupportedBrowser()) {
-      var scriptElement = document.querySelector(
-        "[src$='baloise-unsupported-browsers.js']"
-      );
+      var scriptElement = document.querySelector("[src$='baloise-unsupported-browsers.js']");
 
       if (scriptElement) {
         var location = getLocation(scriptElement.dataset.location);
-        var language = validateLanguage(
-          getLanguage(scriptElement.dataset.language),
-          location
-        );
-        window.location.href = "https://baloise.com/unsupported-browsers/"
-          .concat(location, "/")
-          .concat(language);
+        var language = validateLanguage(getLanguage(scriptElement.dataset.language), location);
+        window.location.href = "https://baloise.com/unsupported-browsers/".concat(location, "/").concat(language);
       }
     }
   }

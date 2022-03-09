@@ -1,25 +1,22 @@
-import { CommonModule } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 import {
-  BalCoreModule,
-  BalHeadingModule,
   BalButtonModule,
-  BalFooterModule,
-  BalNavbarModule,
-  BalLogoModule,
-  BalStageModule,
   BalCardModule,
-  BalFieldModule,
-  BalInputModule,
+  BalCoreModule,
+  BalFooterModule,
+  BalHeadingModule,
+  BalLogoModule,
+  BalNavbarModule,
+  BalStageModule,
   BalToastModule,
-  BalSelectModule,
 } from '@baloise/design-system-components-angular';
-import { AppComponent } from './app.component';
-import { PropertyComponent } from './property/property.component';
-import { EventComponent } from './event/event.component';
-import { MethodComponent } from './method/method.component';
+import {AppComponent} from './app.component';
+import {PropertyComponent} from './property/property.component';
+import {EventComponent} from './event/event.component';
+import {MethodComponent} from './method/method.component';
+import {FormsSubModule} from "./forms/forms-sub.module";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -30,9 +27,6 @@ import { MethodComponent } from './method/method.component';
   ],
   imports: [
     BrowserModule,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
     BalCoreModule.forRoot({
       defaults: {
         region: 'CH',
@@ -47,13 +41,13 @@ import { MethodComponent } from './method/method.component';
     BalLogoModule,
     BalStageModule,
     BalCardModule,
-    BalFieldModule,
-    BalInputModule,
     BalToastModule,
-    BalSelectModule,
+    SharedModule,
+    FormsSubModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule {
+}

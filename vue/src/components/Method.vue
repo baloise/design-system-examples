@@ -4,16 +4,14 @@ import {
   ProxyComponent,
   BalSelect,
   BalSelectOption,
-  BalButton
+  BalButton,
 } from "@baloise/design-system-components-vue";
 import { Components } from "@baloise/design-system-components";
 
 const mySelect = ref<ProxyComponent<Components.BalSelect>>();
 
 function chooseTennis() {
-  if (mySelect.value) {
-    mySelect.value.$el.select("tennis");
-  }
+  mySelect.value?.$el.select("tennis");
 }
 </script>
 

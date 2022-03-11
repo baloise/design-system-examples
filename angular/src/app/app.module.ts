@@ -1,22 +1,12 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {
-  BalButtonModule,
-  BalCardModule,
-  BalCoreModule,
-  BalFooterModule,
-  BalHeadingModule,
-  BalLogoModule,
-  BalNavbarModule,
-  BalStageModule,
-  BalToastModule,
-} from '@baloise/design-system-components-angular';
-import {AppComponent} from './app.component';
-import {PropertyComponent} from './property/property.component';
-import {EventComponent} from './event/event.component';
-import {MethodComponent} from './method/method.component';
-import {FormsSubModule} from "./forms/forms-sub.module";
-import {SharedModule} from "./shared/shared.module";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BalCoreModule } from '@baloise/design-system-components-angular';
+import { AppComponent } from './app.component';
+import { PropertyComponent } from './property/property.component';
+import { EventComponent } from './event/event.component';
+import { MethodComponent } from './method/method.component';
+import { FormsSubModule } from './forms/forms-sub.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -34,20 +24,11 @@ import {SharedModule} from "./shared/shared.module";
         allowedLanguages: ['de', 'fr', 'it', 'en'],
       },
     }),
-    BalHeadingModule,
-    BalButtonModule,
-    BalFooterModule,
-    BalNavbarModule,
-    BalLogoModule,
-    BalStageModule,
-    BalCardModule,
-    BalToastModule,
     SharedModule,
-    FormsSubModule
+    FormsSubModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {
-}
+export class AppModule {}

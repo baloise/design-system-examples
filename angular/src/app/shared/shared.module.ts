@@ -1,28 +1,46 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
+  BalButtonModule,
+  BalCardModule,
   BalFieldModule,
+  BalFooterModule,
+  BalHeadingModule,
   BalInputModule,
+  BalLogoModule,
+  BalNavbarModule,
   BalSelectModule,
-  BalSharedModule
-} from "@baloise/design-system-components-angular";
-import {ReactiveFormsModule} from "@angular/forms";
+  BalStageModule,
+  BalToastModule,
+} from '@baloise/design-system-components-angular';
 
 const commonModules = [
+  /**
+   * Angular Modules
+   */
   CommonModule,
+  FormsModule,
+  ReactiveFormsModule,
+  /**
+   * Design System Modules
+   */
   BalFieldModule,
   BalInputModule,
   BalSelectModule,
-  ReactiveFormsModule,
-  BalSharedModule
-]
+  BalHeadingModule,
+  BalButtonModule,
+  BalFooterModule,
+  BalNavbarModule,
+  BalLogoModule,
+  BalStageModule,
+  BalCardModule,
+  BalToastModule,
+];
 
 @NgModule({
   declarations: [],
-  imports: [
-    ...commonModules
-  ],
-  exports: [...commonModules]
+  imports: [...commonModules],
+  exports: [...commonModules],
 })
-export class SharedModule {
-}
+export class SharedModule {}

@@ -1,3 +1,6 @@
+<bal-file-upload
+  [accept]="'application/pdf'"
+  data-test-id="upload-file-field"></bal-file-upload>
 <form *ngIf="form" [formGroup]="form">
   <bal-field>
     <bal-field-control>
@@ -11,9 +14,10 @@
                            [id]="'status-' + status.toLowerCase()"
                            [label]="status"
                            [value]="status">
-          {{ status}}
+          {{status}}
         </bal-select-option>
       </bal-select>
     </bal-field-control>
+
   </bal-field>
 </form>

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { BalButtonColor } from "@baloise/design-system-components";
+import type { Props } from "@baloise/design-system-components";
 import {
   BalButton,
   BalButtonGroup,
 } from "@baloise/design-system-components-react";
 
 function PropertyComponent() {
-  const [myColor] = useState<BalButtonColor>("info");
+  const [myColor] = useState<Props.BalButtonColor>("info");
 
   return (
     <BalButtonGroup>

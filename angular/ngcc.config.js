@@ -1,6 +1,6 @@
 module.exports = {
   packages: {
-    "@baloise/design-system-components-angular": {
+    "@baloise/design-system-next-components-angular": {
       ignorableDeepImportMatchers: [/@baloise\//],
     },
   },

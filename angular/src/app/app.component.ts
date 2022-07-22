@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-components';
 import {FormControl, FormGroup} from "@angular/forms";
+import { BalConfigState, BalSwissLanguage, onBalConfigChange } from '@baloise/design-system-next-components'
 
 @Component({
   selector: 'app-root',

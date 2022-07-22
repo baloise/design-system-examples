@@ -13,7 +13,7 @@ import {
   BalSelectModule,
   BalStageModule,
   BalToastModule,
-} from '@baloise/design-system-components-angular';
+} from '@baloise/design-system-next-components-angular';
 
 const commonModules = [
   /**

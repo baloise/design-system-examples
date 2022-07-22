@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BalCoreModule } from '@baloise/design-system-components-angular';
+import { BalCoreModule } from '@baloise/design-system-next-components-angular';
 import { AppComponent } from './app.component';
 import { PropertyComponent } from './property/property.component';
 import { EventComponent } from './event/event.component';

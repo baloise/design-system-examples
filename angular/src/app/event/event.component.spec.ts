@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import {
   BalInputModule,
   BalTextModule,
-} from '@baloise/design-system-components-angular';
+} from '@baloise/design-system-next-components-angular';
 import { EventComponent } from './event.component';
 
 describe('EventComponent', () => {

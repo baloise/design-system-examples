@@ -21,8 +21,9 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
-    "@baloise/design-system-next-components-angular": "^10.15.6",
+    "@baloise/design-system-next-components-angular": "10.15.9-beta.11+d536af19",
     "@baloise/web-app-unsupported-browsers": "^3.0.0",
+    "@baloise/web-app-validators-angular": "^3.6.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
-import { BalConfigState, BalSwissLanguage, onBalConfigChange } from '@baloise/design-system-next-components'
+import {EmailValidator, FormControl, FormGroup, RequiredValidator} from "@angular/forms";
+import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-next-components'
+import {BalValidators} from "@baloise/web-app-validators-angular";
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,11 @@ import { BalConfigState, BalSwissLanguage, onBalConfigChange } from '@baloise/de
 export class AppComponent {
   title = 'Welcome';
   language: BalSwissLanguage = 'en';
-  form = new FormGroup({name: new FormControl('Example name'), status: new FormControl('Hans Muster')});
+  form = new FormGroup({
+    name: new FormControl('Example name'),
+    email: new FormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
+    status: new FormControl('Hans Muster')
+  });
 
   constructor() {
     onBalConfigChange((config: BalConfigState) => {

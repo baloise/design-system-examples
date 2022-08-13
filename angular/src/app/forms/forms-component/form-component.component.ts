@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {FormGroup} from "@angular/forms";
+import {UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-form-component',
@@ -12,7 +12,7 @@ export class FormComponent implements OnInit {
   statusOptions = ['John Doe', 'Hans Muster'];
 
   @Input()
-  form?: FormGroup
+  form?: UntypedFormGroup
 
   ngOnInit(): void {
   }

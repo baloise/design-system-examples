@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {EmailValidator, FormControl, FormGroup, RequiredValidator} from "@angular/forms";
+import {EmailValidator, UntypedFormControl, UntypedFormGroup, RequiredValidator} from "@angular/forms";
 import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-next-components'
 import {BalValidators} from "@baloise/web-app-validators-angular";
 
@@ -11,10 +11,10 @@ import {BalValidators} from "@baloise/web-app-validators-angular";
 export class AppComponent {
   title = 'Welcome';
   language: BalSwissLanguage = 'en';
-  form = new FormGroup({
-    name: new FormControl('Example name'),
-    email: new FormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
-    status: new FormControl('Hans Muster')
+  form = new UntypedFormGroup({
+    name: new UntypedFormControl('Example name'),
+    email: new UntypedFormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
+    status: new UntypedFormControl('Hans Muster')
   });
 
   constructor() {

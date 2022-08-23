@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   BalButtonModule,
-  BalCardModule,
+  BalCardModule, BalDatepickerModule,
   BalFieldModule,
   BalFooterModule,
   BalHeadingModule,
@@ -36,6 +36,7 @@ const commonModules = [
   BalStageModule,
   BalCardModule,
   BalToastModule,
+  BalDatepickerModule,
 ];
 
 @NgModule({

@@ -10,9 +10,14 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class AppComponent {
   title = 'Welcome';
   language: BalSwissLanguage = 'en';
-  form = new FormGroup({name: new FormControl('Example name'), status: new FormControl('Hans Muster')});
+  form = new FormGroup({
+    name: new FormControl('Example name'),
+    status: new FormControl('Hans Muster'),
+    birthdate: new FormControl()
+  });
 
   constructor() {
+
     onBalConfigChange((config: BalConfigState) => {
       this.language = config.language as BalSwissLanguage;
 

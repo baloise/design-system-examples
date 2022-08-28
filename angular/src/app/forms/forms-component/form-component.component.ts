@@ -17,4 +17,7 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onBlur($event: Event) {
+    console.log("oon blur happened: ", $event)
+  }
 }

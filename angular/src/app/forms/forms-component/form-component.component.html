@@ -1,9 +1,10 @@
 <form *ngIf="form" [formGroup]="form">
   <bal-field>
     <bal-field-control>
-      <bal-input formControlName="name"></bal-input>
+      <bal-input formControlName="name" (balBlur)="onBlur($event)"></bal-input>
     </bal-field-control>
   </bal-field>
+  example name is: {{form.get('name')?.value}}
   <bal-field>
     <bal-field-control>
       <bal-input formControlName="email"></bal-input>

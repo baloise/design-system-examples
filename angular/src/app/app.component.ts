@@ -12,7 +12,7 @@ export class AppComponent {
   title = 'Welcome';
   language: BalSwissLanguage = 'en';
   form = new FormGroup({
-    name: new FormControl('Example name'),
+    name: new FormControl('', [BalValidators.isRequired()]),
     email: new FormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
     status: new FormControl('Hans Muster')
   });

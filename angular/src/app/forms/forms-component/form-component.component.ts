@@ -20,4 +20,8 @@ export class FormComponent implements OnInit {
   onBlur($event: Event) {
     console.log("oon blur happened: ", $event)
   }
+
+  onFocus($event: Event) {
+    console.log("oon focus happened: ", $event)
+  }
 }

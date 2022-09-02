@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BalCoreModule } from '@baloise/design-system-next-components-angular';
+import {BalCoreModule, BalTextModule} from '@baloise/design-system-next-components-angular';
 import { AppComponent } from './app.component';
 import { PropertyComponent } from './property/property.component';
 import { EventComponent } from './event/event.component';
@@ -26,6 +26,7 @@ import { SharedModule } from './shared/shared.module';
     }),
     SharedModule,
     FormsSubModule,
+    BalTextModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

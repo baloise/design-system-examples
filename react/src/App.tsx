@@ -5,8 +5,6 @@ import {
   BalHeading,
   BalNavbar,
   BalNavbarBrand,
-  BalLogo,
-  BalText,
   BalStage,
   BalStageBody,
   BalCard,
@@ -50,12 +48,9 @@ function App() {
     <BalApp class="has-sticky-footer has-background">
       <header>
         <BalNavbar>
-          <BalNavbarBrand>
-            <BalLogo color="white"></BalLogo>
-            <BalText bold>Demo</BalText>
-          </BalNavbarBrand>
+          <BalNavbarBrand>React Example</BalNavbarBrand>
         </BalNavbar>
-        <BalStage color="blue" size="medium">
+        <BalStage color="purple" size="small">
           <BalStageBody>
             <div className="container is-compact">
               <BalHeading space="none" data-testid="welcome-title">

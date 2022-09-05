@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "start": "npm run dev",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
@@ -10,7 +11,7 @@
     "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-next-fonts/lib/* public/assets/fonts"
   },
   "dependencies": {
-    "@baloise/design-system-next-components-vue": "10.18.1-beta.46",
+    "@baloise/design-system-next-components-vue": "10.18.1-beta.47",
     "vue": "^3.2.38"
   },
   "devDependencies": {

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { useBaloiseDesignSystem } from "@baloise/design-system-components-react";
+import { useBaloiseDesignSystem } from "@baloise/design-system-next-components-react";
 
 ReactDOM.render(
   <React.StrictMode>

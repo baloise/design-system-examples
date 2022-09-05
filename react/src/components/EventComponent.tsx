@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BalInput, BalText } from "@baloise/design-system-components-react";
+import { BalInput, BalText } from "@baloise/design-system-next-components-react";
 
 function EventComponent() {
   const [myName, setMyName] = useState<string | undefined>();

@@ -2,7 +2,7 @@ import {
   BalSelect,
   BalSelectOption,
   BalButton,
-} from "@baloise/design-system-components-react";
+} from "@baloise/design-system-next-components-react";
 import { useRef } from "react";
 
 function MethodComponent() {

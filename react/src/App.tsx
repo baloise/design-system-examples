@@ -9,17 +9,16 @@ import {
   BalText,
   BalStage,
   BalStageBody,
-  BalStageImage,
   BalCard,
   BalCardTitle,
   BalCardSubtitle,
   BalCardContent,
-} from "@baloise/design-system-components-react";
+} from "@baloise/design-system-next-components-react";
 import {
   onBalConfigChange,
   BalConfigState,
   BalSwissLanguage,
-} from "@baloise/design-system-components";
+} from "@baloise/design-system-next-components";
 import PropertyComponent from "./components/PropertyComponent";
 import EventComponent from "./components/EventComponent";
 import MethodComponent from "./components/MethodComponent";
@@ -57,7 +56,6 @@ function App() {
           </BalNavbarBrand>
         </BalNavbar>
         <BalStage color="blue" size="medium">
-          <BalStageImage src="https://www.baloise.com/.imaging/mte/baloise-theme/2880/dam/baloise-com/images/ueber-uns/wer-wir-sind/bilder-logos/frau-fotoapparat.jpg/jcr:content/frau-fotoapparat.jpg"></BalStageImage>
           <BalStageBody>
             <div className="container is-compact">
               <BalHeading space="none" data-testid="welcome-title">

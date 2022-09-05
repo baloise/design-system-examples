@@ -10,7 +10,7 @@
     "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-next-fonts/lib/* public/assets/fonts"
   },
   "dependencies": {
-    "@baloise/design-system-next-components-vue": "10.18.1-beta.45",
+    "@baloise/design-system-next-components-vue": "10.18.1-beta.46",
     "vue": "^3.2.38"
   },
   "devDependencies": {

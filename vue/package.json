@@ -3,23 +3,22 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "baloiseStencilViteFix && vite",
+    "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "postinstall": "npm run copy:fonts",
-    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-fonts/lib/* public/assets/fonts"
+    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-next-fonts/lib/* public/assets/fonts"
   },
   "dependencies": {
-    "@baloise/design-system-components-vue": "^10.3.1-beta.15",
-    "vue": "^3.2.25"
+    "@baloise/design-system-next-components-vue": "10.18.1-beta.45",
+    "vue": "^3.2.38"
   },
   "devDependencies": {
-    "@baloise/stencil-vite-fix": "^10.3.1-beta.15",
-    "@vitejs/plugin-vue": "^2.2.0",
+    "@vitejs/plugin-vue": "^3.0.3",
     "copyfiles": "^2.4.1",
-    "sass": "^1.49.9",
-    "typescript": "^4.5.4",
-    "vite": "^2.8.0",
-    "vue-tsc": "^0.29.8"
+    "sass": "^1.54.8",
+    "typescript": "^4.8.2",
+    "vite": "^3.0.9",
+    "vue-tsc": "^0.40.7"
   }
 }

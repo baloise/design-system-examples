@@ -15,12 +15,12 @@ import {
   BalCardTitle,
   BalCardSubtitle,
   BalCardContent,
-} from "@baloise/design-system-components-vue";
+} from "@baloise/design-system-next-components-vue";
 import {
   onBalConfigChange,
   BalConfigState,
   BalSwissLanguage,
-} from "@baloise/design-system-components";
+} from "@baloise/design-system-next-components";
 import PropertyComponent from "./components/Property.vue";
 import EventComponent from "./components/Event.vue";
 import MethodComponent from "./components/Method.vue";

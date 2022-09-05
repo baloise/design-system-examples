@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { BalInput, BalText } from "@baloise/design-system-components-vue";
+import { BalInput, BalText } from "@baloise/design-system-next-components-vue";
+import { Events } from "@baloise/design-system-next-components";
 
 const myName = ref<string | undefined>();
 
-function updateName(value?: string) {
-  myName.value = value;
+function updateName(event: Events.BalInputChange) {
+  myName.value = event.detail;
 }
 </script>
 

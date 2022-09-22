@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {FormGroup} from "@angular/forms";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-form-component',
@@ -9,12 +9,14 @@ import {FormGroup} from "@angular/forms";
 export class FormComponent implements OnInit {
 
   constructor() { }
-  statusOptions = ['John Doe', 'Hans Muster'];
+  statusOptions = [{name: 'John Doe', value: 'JD'}, {name: 'Hans Muster', value: 'HM'}];
 
   @Input()
   form?: FormGroup
 
   ngOnInit(): void {
+    this.form?.addControl('status', new FormControl('HM'));
+    this.form?.addControl('status2', new FormControl('JD'));
   }
 
 }

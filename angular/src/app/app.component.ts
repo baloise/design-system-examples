@@ -14,7 +14,6 @@ export class AppComponent {
   form = new FormGroup({
     name: new FormControl('Example name'),
     email: new FormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
-    status: new FormControl('Hans Muster')
   });
 
   constructor() {

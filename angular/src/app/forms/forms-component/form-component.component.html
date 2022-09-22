@@ -18,12 +18,25 @@
 
   <bal-field class="is-one-third" expanded>
     <bal-field-control>
-      <bal-select data-test-id="status-dropdown" expanded formControlName="status">
+      <bal-select data-test-id="status-dropdown" expanded formControlName="status" [remote]="true">
         <bal-select-option *ngFor="let status of statusOptions"
-                           [id]="'status-' + status.toLowerCase()"
-                           [label]="status"
-                           [value]="status">
-          {{ status}}
+                           [id]="'status-' + status.name.toLowerCase()"
+                           [label]="status.name"
+                           [value]="status.value">
+          {{ status.name }}
+        </bal-select-option>
+      </bal-select>
+    </bal-field-control>
+  </bal-field>
+
+  <bal-field class="is-one-third" expanded>
+    <bal-field-control>
+      <bal-select data-test-id="status-dropdown" expanded formControlName="status2" [remote]="true">
+        <bal-select-option *ngFor="let status of statusOptions"
+                           [id]="'status-' + status.name.toLowerCase()"
+                           [label]="status.name"
+                           [value]="status.value">
+          {{ status.name }}
         </bal-select-option>
       </bal-select>
     </bal-field-control>

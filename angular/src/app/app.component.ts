@@ -17,6 +17,8 @@ export class AppComponent {
     status: new FormControl('Hans Muster')
   });
 
+  value = 'input template form'
+
   constructor() {
     onBalConfigChange((config: BalConfigState) => {
       this.language = config.language as BalSwissLanguage;
@@ -36,5 +38,10 @@ export class AppComponent {
           break;
       }
     });
+
+    setTimeout(() => {
+      this.value = "Changed value programmatically"
+    }, 2000)
+
   }
 }

@@ -13,6 +13,7 @@ export class AppComponent {
   language: BalSwissLanguage = 'en';
   form = new FormGroup({
     name: new FormControl('Example name'),
+    radioButton: new FormControl('yes'),
     email: new FormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
     status: new FormControl('Hans Muster')
   });

@@ -30,4 +30,17 @@
       </bal-select>
     </bal-field-control>
   </bal-field>
+
+  <bal-field>
+    <bal-field-label>Label</bal-field-label>
+    <bal-field-control>
+      <bal-radio-group interface="select-button" formControlName="radioButton">
+        <bal-radio name="select-button-example" value="yes">Yes</bal-radio>
+        <bal-radio name="select-button-example" value="no">No</bal-radio>
+      </bal-radio-group>
+    </bal-field-control>
+    <bal-field-message color="hint">Field Message</bal-field-message>
+  </bal-field>
+  {{form?.get('radioButton')?.touched}}
+
 </form>

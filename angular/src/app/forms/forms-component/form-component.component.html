@@ -41,6 +41,18 @@
     </bal-field-control>
     <bal-field-message color="hint">Field Message</bal-field-message>
   </bal-field>
-  {{form?.get('radioButton')?.touched}}
+  radioButton touched: {{form?.get('radioButton')?.touched}}
 
+  <bal-field>
+    <bal-field-label>Is this form correct?</bal-field-label>
+    <bal-field-control>
+      <bal-checkbox-group formControlName="correct">
+        <bal-checkbox>
+          Label
+        </bal-checkbox>
+      </bal-checkbox-group>
+    </bal-field-control>
+    <bal-field-message color="hint">Field Message</bal-field-message>
+  </bal-field>
+  value is: {{form?.get('correct')?.value}}
 </form>

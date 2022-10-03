@@ -5,7 +5,7 @@
     </bal-field-control>
   </bal-field>
   <bal-field>
-    {{form?.get('email')?.touched}}
+    email touched: {{form?.get('email')?.touched}}
 
     <bal-field-control>
       <bal-input formControlName="email"></bal-input>
@@ -30,6 +30,7 @@
       </bal-select>
     </bal-field-control>
   </bal-field>
+  status touched: {{form?.get('email')?.touched}}
 
   <bal-field>
     <bal-field-label>Label</bal-field-label>
@@ -46,8 +47,8 @@
   <bal-field>
     <bal-field-label>Is this form correct?</bal-field-label>
     <bal-field-control>
-      <bal-checkbox-group formControlName="correct">
-        <bal-checkbox>
+      <bal-checkbox-group >
+        <bal-checkbox formControlName="correct">
           Label
         </bal-checkbox>
       </bal-checkbox-group>

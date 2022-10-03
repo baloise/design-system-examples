@@ -1,14 +1,20 @@
 <bal-app class="has-sticky-footer">
   <header>
-    <bal-navbar interface="app">
-      <bal-navbar-brand href="/">Angular Example</bal-navbar-brand>
+    <bal-navbar>
+      <bal-navbar-brand simple>
+        <bal-logo color="white"></bal-logo>
+        <bal-text bold>Demo</bal-text>
+      </bal-navbar-brand>
     </bal-navbar>
-    <bal-stage color="red" size="small">
+    <bal-stage color="blue" size="medium">
+      <bal-stage-image
+        src-set="https://www.baloise.com/.imaging/mte/baloise-theme/2880/dam/baloise-com/images/ueber-uns/wer-wir-sind/bilder-logos/frau-fotoapparat.jpg/jcr:content/frau-fotoapparat.jpg"
+      ></bal-stage-image>
       <bal-stage-body>
         <div class="container is-compact">
           <bal-heading space="none" data-testid="welcome-title">{{
             title
-          }}</bal-heading>
+            }}</bal-heading>
           <bal-heading space="none" subtitle level="h2">
             To the Baloise Design System
           </bal-heading>
@@ -51,6 +57,15 @@
         <app-form-component [form]="form"></app-form-component>
       </bal-card-content>
     </bal-card>
+    <bal-card class="mt-6">
+      <bal-card-title>Template form</bal-card-title>
+      <bal-card-content>
+        <bal-input [(ngModel)]="value">
+        </bal-input>
+        <bal-text>Value is adapted on: {{value}}</bal-text>
+      </bal-card-content>
+    </bal-card>
+
   </main>
   <bal-footer></bal-footer>
 </bal-app>

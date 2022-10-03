@@ -14,8 +14,11 @@ export class AppComponent {
   form = new UntypedFormGroup({
     name: new UntypedFormControl('Example name'),
     email: new UntypedFormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
-    status: new UntypedFormControl('Hans Muster')
+    status: new UntypedFormControl('Hans Muster'),
+    radioButton: new UntypedFormControl('yes'),
+    correct: new UntypedFormControl(true)
   });
+  value = 'input template form'
 
   constructor() {
     onBalConfigChange((config: BalConfigState) => {

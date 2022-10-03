@@ -5,6 +5,8 @@
     </bal-field-control>
   </bal-field>
   <bal-field>
+    email touched: {{form.get('email')?.touched}}
+
     <bal-field-control>
       <bal-input formControlName="email"></bal-input>
     </bal-field-control>
@@ -28,4 +30,30 @@
       </bal-select>
     </bal-field-control>
   </bal-field>
+  status touched: {{form.get('status')?.touched}}
+
+  <bal-field>
+    <bal-field-label>Label</bal-field-label>
+    <bal-field-control>
+      <bal-radio-group interface="select-button" formControlName="radioButton">
+        <bal-radio name="select-button-example" value="yes">Yes</bal-radio>
+        <bal-radio name="select-button-example" value="no">No</bal-radio>
+      </bal-radio-group>
+    </bal-field-control>
+    <bal-field-message color="hint">Field Message</bal-field-message>
+  </bal-field>
+  radioButton touched: {{form.get('radioButton')?.touched}}
+
+  <bal-field>
+    <bal-field-label>Is this form correct?</bal-field-label>
+    <bal-field-control>
+      <bal-checkbox-group >
+        <bal-checkbox formControlName="correct">
+          Label
+        </bal-checkbox>
+      </bal-checkbox-group>
+    </bal-field-control>
+    <bal-field-message color="hint">Field Message</bal-field-message>
+  </bal-field>
+  value is: {{form.get('correct')?.value}}
 </form>

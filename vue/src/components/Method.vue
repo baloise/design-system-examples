@@ -5,8 +5,8 @@ import {
   BalSelect,
   BalSelectOption,
   BalButton,
-} from "@baloise/design-system-next-components-vue";
-import { Components } from "@baloise/design-system-next-components";
+} from "@baloise/design-system-components-vue";
+import { Components } from "@baloise/design-system-components";
 
 const mySelect = ref<ProxyComponent<Components.BalSelect>>();
 

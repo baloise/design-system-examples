@@ -8,10 +8,10 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "postinstall": "npm run copy:fonts",
-    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-next-fonts/lib/* public/assets/fonts"
+    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-fonts/lib/* public/assets/fonts"
   },
   "dependencies": {
-    "@baloise/design-system-next-components-vue": "10.18.1-beta.47",
+    "@baloise/design-system-components-vue": "^11.0.0",
     "vue": "^3.2.38"
   },
   "devDependencies": {

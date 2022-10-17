@@ -11,12 +11,12 @@ import {
   BalCardTitle,
   BalCardSubtitle,
   BalCardContent,
-} from "@baloise/design-system-next-components-react";
+} from "@baloise/design-system-components-react";
 import {
   onBalConfigChange,
   BalConfigState,
   BalSwissLanguage,
-} from "@baloise/design-system-next-components";
+} from "@baloise/design-system-components";
 import PropertyComponent from "./components/PropertyComponent";
 import EventComponent from "./components/EventComponent";
 import MethodComponent from "./components/MethodComponent";

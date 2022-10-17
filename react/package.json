@@ -10,10 +10,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "npm run copy:fonts",
-    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-next-fonts/lib/* src/assets/fonts"
+    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-fonts/lib/* src/assets/fonts"
   },
   "dependencies": {
-    "@baloise/design-system-next-components-react": "10.18.1-beta.47",
+    "@baloise/design-system-components-react": "^11.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

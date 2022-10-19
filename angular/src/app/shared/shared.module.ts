@@ -5,6 +5,7 @@ import {
   BalButtonModule,
   BalCardModule,
   BalCheckboxModule,
+  BalDatepickerModule,
   BalFieldModule,
   BalFooterModule,
   BalHeadingModule,
@@ -39,7 +40,8 @@ const commonModules = [
   BalCardModule,
   BalToastModule,
   BalCheckboxModule,
-  BalRadioModule
+  BalRadioModule,
+  BalDatepickerModule,
 ];
 
 @NgModule({

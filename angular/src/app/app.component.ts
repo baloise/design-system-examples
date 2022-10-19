@@ -16,12 +16,14 @@ export class AppComponent {
     radioButton: new FormControl('yes'),
     email: new FormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
     status: new FormControl('Hans Muster'),
-    correct: new FormControl(true)
+    correct: new FormControl(true),
+    birthdate: new FormControl()
   });
 
   value = 'input template form'
 
   constructor() {
+
     onBalConfigChange((config: BalConfigState) => {
       this.language = config.language as BalSwissLanguage;
 

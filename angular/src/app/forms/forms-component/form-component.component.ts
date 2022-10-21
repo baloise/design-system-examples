@@ -20,6 +20,14 @@ export class FormComponent implements OnInit {
   form?: FormGroup
 
   ngOnInit(): void {
+    console.log('oninit', this.form?.get('test')?.value, 'parseFloat ', parseFloat(this.form?.get('test')?.value));
+  }
+
+  onInput(ev: any){
+    console.log('onInput happened: ', ev)
+  }
+  onFocus(ev: any){
+    console.log('onFocus happened: ', ev)
   }
 
 }

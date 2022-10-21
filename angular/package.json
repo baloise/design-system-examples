@@ -21,7 +21,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
-    "@baloise/design-system-components-angular": "^11.0.0",
+    "@baloise/design-system-components-angular": "^11.0.1",
     "@baloise/web-app-unsupported-browsers": "^3.0.0",
     "@baloise/web-app-validators-angular": "^3.6.1",
     "rxjs": "~6.6.0",

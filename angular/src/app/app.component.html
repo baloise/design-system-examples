@@ -8,16 +8,32 @@
     </bal-navbar>
   </header>
   <main class="container is-compact">
-    <bal-card class="mt-6">
-      <bal-card-title>Property example</bal-card-title>
-      <bal-card-subtitle>
-        A little demonstration how to change properties of our
-        components
-      </bal-card-subtitle>
+
+
+    <bal-card class="my-6" [attr.data-test-id]="'home-container'">
+      <bal-card-title>single selection buttons </bal-card-title>
       <bal-card-content>
-        <app-property></app-property>
+        <bal-form-grid>
+          <bal-form-col>
+
+            <bal-field [formGroup]="formGroup" tabindex="-1" [invalid]="false" [disabled]="false">
+              <bal-field-label [required]="true">Test</bal-field-label>
+              <bal-field-control>
+                <bal-radio-group interface="select-button" [formControlName]="'testOptionsControl'">
+                  <bal-radio *ngFor="let option of options" [name]="'testOptionsControl'" [value]="option.value">
+                    {{ option.label }}
+                  </bal-radio>
+                </bal-radio-group>
+              </bal-field-control>
+            </bal-field>
+
+          </bal-form-col>
+        </bal-form-grid>
       </bal-card-content>
     </bal-card>
+
+
+
   </main>
   <bal-footer></bal-footer>
 </bal-app>

@@ -58,6 +58,15 @@
         <app-form-component [form]="form"></app-form-component>
       </bal-card-content>
     </bal-card>
+    <bal-card class="mt-6">
+      <bal-card-title>Template form</bal-card-title>
+      <bal-card-content>
+        <bal-input balAutoFocus [(ngModel)]="value">
+        </bal-input>
+        <bal-text>Value is adapted on: {{value}}</bal-text>
+      </bal-card-content>
+    </bal-card>
+
   </main>
   <bal-footer></bal-footer>
 </bal-app>

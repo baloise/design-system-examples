@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {EmailValidator, FormControl, FormGroup, RequiredValidator} from "@angular/forms";
-import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-next-components'
+import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-components'
 import {BalValidators} from "@baloise/web-app-validators-angular";
 
 @Component({
@@ -13,8 +13,14 @@ export class AppComponent {
   language: BalSwissLanguage = 'en';
   form = new FormGroup({
     name: new FormControl('Example name'),
+    radioButton: new FormControl('yes'),
     email: new FormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
+    status: new FormControl('Hans Muster'),
+    test: new FormControl(''),
+    correct: new FormControl(true)
   });
+
+  value = 'input template form'
 
   constructor() {
     onBalConfigChange((config: BalConfigState) => {
@@ -35,5 +41,10 @@ export class AppComponent {
           break;
       }
     });
+
+    setTimeout(() => {
+      this.value = "Changed value programmatically"
+    }, 2000)
+
   }
 }

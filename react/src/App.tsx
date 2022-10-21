@@ -5,11 +5,8 @@ import {
   BalHeading,
   BalNavbar,
   BalNavbarBrand,
-  BalLogo,
-  BalText,
   BalStage,
   BalStageBody,
-  BalStageImage,
   BalCard,
   BalCardTitle,
   BalCardSubtitle,
@@ -51,13 +48,9 @@ function App() {
     <BalApp class="has-sticky-footer has-background">
       <header>
         <BalNavbar>
-          <BalNavbarBrand>
-            <BalLogo color="white"></BalLogo>
-            <BalText bold>Demo</BalText>
-          </BalNavbarBrand>
+          <BalNavbarBrand>React Example</BalNavbarBrand>
         </BalNavbar>
-        <BalStage color="blue" size="medium">
-          <BalStageImage src="https://www.baloise.com/.imaging/mte/baloise-theme/2880/dam/baloise-com/images/ueber-uns/wer-wir-sind/bilder-logos/frau-fotoapparat.jpg/jcr:content/frau-fotoapparat.jpg"></BalStageImage>
+        <BalStage color="purple" size="small">
           <BalStageBody>
             <div className="container is-compact">
               <BalHeading space="none" data-testid="welcome-title">

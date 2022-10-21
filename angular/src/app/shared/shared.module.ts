@@ -1,19 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   BalButtonModule,
   BalCardModule,
+  BalCheckboxModule,
+  BalDatepickerModule,
   BalFieldModule,
   BalFooterModule,
   BalHeadingModule,
   BalInputModule,
   BalLogoModule,
   BalNavbarModule,
+  BalRadioModule,
   BalSelectModule,
   BalStageModule,
   BalToastModule,
-} from '@baloise/design-system-next-components-angular';
+} from '@baloise/design-system-components-angular';
 
 const commonModules = [
   /**
@@ -36,6 +39,9 @@ const commonModules = [
   BalStageModule,
   BalCardModule,
   BalToastModule,
+  BalCheckboxModule,
+  BalRadioModule,
+  BalDatepickerModule,
 ];
 
 @NgModule({
@@ -43,4 +49,5 @@ const commonModules = [
   imports: [...commonModules],
   exports: [...commonModules],
 })
-export class SharedModule {}
+export class SharedModule {
+}

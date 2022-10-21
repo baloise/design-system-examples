@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {EmailValidator, FormControl, FormGroup, RequiredValidator} from "@angular/forms";
-import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-next-components'
+import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-components'
 import {BalValidators} from "@baloise/web-app-validators-angular";
 
 @Component({

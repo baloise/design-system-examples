@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Props } from '@baloise/design-system-next-components';
+import { Props } from '@baloise/design-system-components';
 
 @Component({
   selector: 'app-property',

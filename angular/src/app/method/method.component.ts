@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import type { Components } from '@baloise/design-system-next-components';
-// import { ProxyComponent } from '@baloise/design-system-next-components-angular';
+import type { Components } from '@baloise/design-system-components';
+// import { ProxyComponent } from '@baloise/design-system-components-angular';
 export interface ProxyComponent<T> {
   el: T;
 }

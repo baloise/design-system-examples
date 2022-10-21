@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@baloise/design-system-components": "^10.3.0"
+    "@baloise/design-system-components": "^11.0.0"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",

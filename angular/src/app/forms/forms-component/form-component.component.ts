@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {formatDateString} from "@baloise/web-app-utils";
 
@@ -7,7 +7,7 @@ import {formatDateString} from "@baloise/web-app-utils";
   templateUrl: './form-component.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FormComponent implements OnInit {
+export class FormComponent implements OnInit, AfterViewChecked {
 
   constructor() { }
   statusOptions = [{name: 'John Doe', value: 'JD'}, {name: 'Hans Muster', value: 'HM'}];
@@ -18,8 +18,20 @@ export class FormComponent implements OnInit {
   form?: FormGroup
 
   ngOnInit(): void {
-    this.form?.addControl('status', new FormControl('HM'));
+    console.log('ngOnInit happened')
     this.form?.addControl('status2', new FormControl('JD'));
+    console.log('ngOnInit happened status: ', this?.form?.get('state')?.value);
+    this.form?.addControl('status', new FormControl('HM'));
+
+  }
+
+  ngAfterViewChecked() {
+    this.form?.get('status')?.setValue('HM');
+
+  }
+
+  onBalChange(event: CustomEvent){
+    console.log(event);
   }
 
 }

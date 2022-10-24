@@ -29,7 +29,7 @@
 
   <bal-field class="is-one-third" expanded>
     <bal-field-control>
-      <bal-select data-test-id="status-dropdown" expanded formControlName="status" [remote]="true">
+      <bal-select data-test-id="status-dropdown" expanded formControlName="status" [remote]="true" (balChange)="onBalChange($event)">
         <bal-select-option *ngFor="let status of statusOptions"
                            [id]="'status-' + status.name.toLowerCase()"
                            [label]="status.name"
@@ -39,20 +39,21 @@
       </bal-select>
     </bal-field-control>
   </bal-field>
+  status typeahead value {{form?.get('status')?.value}}
 
-  <bal-field class="is-one-third" expanded>
-    <bal-field-control>
-      <bal-select data-test-id="status-dropdown" expanded formControlName="status2" [remote]="true">
-        <bal-select-option *ngFor="let status of statusOptions"
-                           [id]="'status-' + status.name.toLowerCase()"
-                           [label]="status.name"
-                           [value]="status.value">
-          {{ status.name }}
-        </bal-select-option>
-      </bal-select>
-    </bal-field-control>
-  </bal-field>
-  status touched: {{form?.get('status')?.touched}}
+<!--  <bal-field class="is-one-third" expanded>-->
+<!--    <bal-field-control>-->
+<!--      <bal-select data-test-id="status-dropdown" expanded formControlName="status2" [remote]="true">-->
+<!--        <bal-select-option *ngFor="let status of statusOptions"-->
+<!--                           [id]="'status-' + status.name.toLowerCase()"-->
+<!--                           [label]="status.name"-->
+<!--                           [value]="status.value">-->
+<!--          {{ status.name }}-->
+<!--        </bal-select-option>-->
+<!--      </bal-select>-->
+<!--    </bal-field-control>-->
+<!--  </bal-field>-->
+<!--  status touched: {{form?.get('status')?.touched}}-->
 
   <bal-field>
     <bal-field-label>Label</bal-field-label>

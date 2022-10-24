@@ -8,16 +8,41 @@
     </bal-navbar>
   </header>
   <main class="container is-compact">
-    <bal-card class="mt-6">
-      <bal-card-title>Property example</bal-card-title>
-      <bal-card-subtitle>
-        A little demonstration how to change properties of our
-        components
-      </bal-card-subtitle>
-      <bal-card-content>
-        <app-property></app-property>
-      </bal-card-content>
-    </bal-card>
+
+    <ng-container [formGroup]="formGroup">
+      <bal-card class="mt-6">
+        <bal-card-title>Initial Value example</bal-card-title>
+        <bal-card-subtitle>
+          <a href="https://github.com/baloise-incubator/design-system/issues/603">see also github issue</a>
+        </bal-card-subtitle>
+        <bal-card-content>
+          <bal-field-control>
+            <bal-select
+              autocomplete="'address-line1'"
+              [formControlName]="'street'"
+              (balChange)="onSelectedItem($event)"
+              [typeahead]="true"
+              [remote]="true"
+              [noDataLabel]="'noData'"
+              [maxLength]="35"
+              [disabled]="false"
+              [selectionOptional]="true"
+              (balInput)="onInput($event)"
+            >
+              <bal-select-option *ngFor="let option of options | async" [value]="option.value" [label]="option.label">
+                {{ option.label }}
+              </bal-select-option>
+            </bal-select>
+          </bal-field-control>
+        </bal-card-content>
+
+        <bal-card-actions>
+          {{ formGroup.value | json }}
+        </bal-card-actions>
+      </bal-card>
+    </ng-container>
+
+
   </main>
   <bal-footer></bal-footer>
 </bal-app>

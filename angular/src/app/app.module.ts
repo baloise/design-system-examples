@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {BalCoreModule, BalTextModule} from '@baloise/design-system-components-angular';
+import { BalCoreModule, BalListModule, BalTagModule, BalTextModule } from '@baloise/design-system-components-angular';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 
@@ -19,6 +19,8 @@ import { SharedModule } from './shared/shared.module';
     }),
     SharedModule,
     BalTextModule,
+    BalListModule,
+    BalTagModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

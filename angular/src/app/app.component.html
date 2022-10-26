@@ -8,16 +8,54 @@
     </bal-navbar>
   </header>
   <main class="container is-compact">
-    <bal-card class="mt-6">
-      <bal-card-title>Property example</bal-card-title>
+    <bal-card class="mt-6" *ngIf="streets$ |  async as streets">
+      <bal-card-title>street 1</bal-card-title>
       <bal-card-subtitle>
-        A little demonstration how to change properties of our
-        components
+
       </bal-card-subtitle>
+      <bal-card-content [formGroup]="formGroup">
+        <bal-field-control>
+          <bal-select
+            [formControlName]="'street1'"
+            [typeahead]="true"
+            [remote]="true"
+            [maxLength]="35"
+            [disabled]="false"
+            [selectionOptional]="false"
+            (balInput)="onBalInput($event)"
+            (balChange)="onBalInput($event)"
+          >
+            <bal-select-option *ngFor="let street of streets" [value]="street.value" [label]="street.label">
+              {{ street.label }}
+            </bal-select-option>
+          </bal-select>
+
+
+        </bal-field-control>
+        <bal-field-message>
+          {{streets.length}}
+        </bal-field-message>
+      </bal-card-content>
+      <bal-card-actions>
+
+      </bal-card-actions>
+    </bal-card>
+
+    <bal-card class="mt-4">
+      <bal-card-title>formGroup</bal-card-title>
       <bal-card-content>
-        <app-property></app-property>
+        {{formGroup.value | json}}
       </bal-card-content>
     </bal-card>
+    <hr/>
+    <div>
+      <h4>streets available:</h4>
+      <bal-tag class="m-1" *ngFor="let street of streets$ | async" color="primary"
+               size="small">{{street.label}}</bal-tag>
+    </div>
+
   </main>
   <bal-footer></bal-footer>
 </bal-app>
+
+

@@ -21,6 +21,10 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('oninit', this.form?.get('test')?.value, 'parseFloat ', parseFloat(this.form?.get('test')?.value));
+
+    this.form?.get('correct')?.valueChanges.subscribe(value => {
+      debugger;
+    });
   }
 
   onInput(ev: any){

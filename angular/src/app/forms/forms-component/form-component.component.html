@@ -65,4 +65,38 @@
     <bal-field-message color="hint">Field Message</bal-field-message>
   </bal-field>
   value is: {{form?.get('correct')?.value}}
+
+  <bal-field>
+    <bal-radio-group vertical="true" [formControlName]="'correct'">
+      <div [attr.data-test-id]="'container-suggestion'" class="is-flex is-flex-direction-column container-suggestion insurance-sum-container">
+        <bal-field-control class="pb-1">
+          <bal-radio name="radio-suggestion" [value]="false" data-test-id="radio-suggestion">
+            <bal-field-label class="mb-0">false value</bal-field-label>
+          </bal-radio>
+        </bal-field-control>
+        <bal-field-control class="pl-6">
+          <bal-input
+            data-test-id="input-self-determined"
+            [formControlName]="'status'"
+          ></bal-input>
+        </bal-field-control>
+      </div>
+
+      <div [attr.data-test-id]="'container-self-determined'" class="is-flex is-flex-direction-column insurance-sum-container">
+        <bal-field-control class="pb-1">
+          <bal-radio name="radio-self-determined" [value]="true" data-test-id="radio-self-determined">
+            <bal-field-label class="mb-0">true value</bal-field-label>
+          </bal-radio>
+        </bal-field-control>
+        <bal-field-control class="pl-6">
+          <bal-input
+            data-test-id="input-self-determined"
+            [formControlName]="'test'"
+          ></bal-input>
+        </bal-field-control>
+
+      </div>
+    </bal-radio-group>
+  </bal-field>
+
 </form>

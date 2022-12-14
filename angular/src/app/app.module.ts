@@ -2,22 +2,15 @@ import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {
-  BalButtonModule,
-  BalCardModule,
-  BalCheckboxModule,
   BalCoreModule,
-  BalDatepickerModule,
-  BalFieldModule,
-  BalFooterModule,
-  BalHeadingModule,
-  BalInputModule,
   BalLogoModule,
   BalNavbarModule,
-  BalRadioModule,
-  BalSelectModule,
+  BalFooterModule,
   BalStageModule,
+  BalCardModule,
+  BalHeadingModule,
   BalTextModule,
-  BalToastModule,
+  BalInputModule,
 } from '@baloise/design-system-components-angular';
 import { AppComponent } from './app.component';
 

@@ -19,6 +19,9 @@ import { AppComponent } from './app.component';
   imports: [
     CommonModule,
     BrowserModule,
+    /**
+     * Design System Modules
+     */
     BalCoreModule.forRoot({
       defaults: {
         region: 'CH',
@@ -26,9 +29,6 @@ import { AppComponent } from './app.component';
         allowedLanguages: ['de', 'fr', 'it', 'en'],
       },
     }),
-    /**
-     * Design System Modules
-     */
     BalLogoModule,
     BalNavbarModule,
     BalFooterModule,

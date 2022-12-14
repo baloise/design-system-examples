@@ -3,7 +3,7 @@
     <bal-navbar>
       <bal-navbar-brand simple></bal-navbar-brand>
     </bal-navbar>
-    <bal-stage color="red" size="small">
+    <bal-stage color="green" size="small">
       <bal-stage-body>
         <div class="container is-compact">
           <bal-heading space="none" data-testid="welcome-title">v12 Breaking changes</bal-heading>
@@ -22,8 +22,10 @@
         others need to be registered or directly used with the component.
       </bal-card-subtitle>
       <bal-card-content>
-        <bal-icon name="account" size="large"></bal-icon>
-        <bal-icon name="star-full" size="large"></bal-icon>
+        <div class="is-flex fg-large">
+          <bal-icon name="account" size="large"></bal-icon>
+          <bal-icon name="star-full" size="large"></bal-icon>
+        </div>
       </bal-card-content>
     </bal-card>
 
@@ -34,7 +36,7 @@
         with SASS variables could be broken.
       </bal-card-subtitle>
       <bal-card-content>
-        <bal-stage color="purple">Customized stage with sass variable</bal-stage>
+        <bal-stage color="purple">Customized stage with SASS $variable. Should be purple.</bal-stage>
       </bal-card-content>
     </bal-card>
 

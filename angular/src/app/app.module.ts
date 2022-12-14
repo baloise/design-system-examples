@@ -1,21 +1,30 @@
+import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {BalCoreModule, BalTextModule} from '@baloise/design-system-components-angular';
+import {
+  BalButtonModule,
+  BalCardModule,
+  BalCheckboxModule,
+  BalCoreModule,
+  BalDatepickerModule,
+  BalFieldModule,
+  BalFooterModule,
+  BalHeadingModule,
+  BalInputModule,
+  BalLogoModule,
+  BalNavbarModule,
+  BalRadioModule,
+  BalSelectModule,
+  BalStageModule,
+  BalTextModule,
+  BalToastModule,
+} from '@baloise/design-system-components-angular';
 import { AppComponent } from './app.component';
-import { PropertyComponent } from './property/property.component';
-import { EventComponent } from './event/event.component';
-import { MethodComponent } from './method/method.component';
-import { FormsSubModule } from './forms/forms-sub.module';
-import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PropertyComponent,
-    EventComponent,
-    MethodComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
+    CommonModule,
     BrowserModule,
     BalCoreModule.forRoot({
       defaults: {
@@ -24,9 +33,17 @@ import { SharedModule } from './shared/shared.module';
         allowedLanguages: ['de', 'fr', 'it', 'en'],
       },
     }),
-    SharedModule,
-    FormsSubModule,
+    /**
+     * Design System Modules
+     */
+    BalLogoModule,
+    BalNavbarModule,
+    BalFooterModule,
+    BalStageModule,
+    BalCardModule,
+    BalHeadingModule,
     BalTextModule,
+    BalInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

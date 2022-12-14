@@ -1,22 +1,14 @@
 <bal-app class="has-sticky-footer">
   <header>
     <bal-navbar>
-      <bal-navbar-brand simple>
-        <bal-logo color="white"></bal-logo>
-        <bal-text bold>Demo</bal-text>
-      </bal-navbar-brand>
+      <bal-navbar-brand simple></bal-navbar-brand>
     </bal-navbar>
-    <bal-stage color="blue" size="medium">
-      <bal-stage-image
-        src-set="https://www.baloise.com/.imaging/mte/baloise-theme/2880/dam/baloise-com/images/ueber-uns/wer-wir-sind/bilder-logos/frau-fotoapparat.jpg/jcr:content/frau-fotoapparat.jpg"
-      ></bal-stage-image>
+    <bal-stage color="green" size="small">
       <bal-stage-body>
         <div class="container is-compact">
-          <bal-heading space="none" data-testid="welcome-title">{{
-            title
-            }}</bal-heading>
+          <bal-heading space="none" data-testid="welcome-title">v12 Breaking changes</bal-heading>
           <bal-heading space="none" subtitle level="h2">
-            To the Baloise Design System
+            Lets update together
           </bal-heading>
         </div>
       </bal-stage-body>
@@ -24,45 +16,63 @@
   </header>
   <main class="container is-compact">
     <bal-card class="mt-6">
-      <bal-card-title>Property example</bal-card-title>
+      <bal-card-title>Load Custom Icons</bal-card-title>
       <bal-card-subtitle>
-        A little demonstration how to change properties of our
-        components
+        Not all icons are loaded from the beginning only the ones are used by the Design System. The
+        others need to be registered or directly used with the component.
       </bal-card-subtitle>
       <bal-card-content>
-        <app-property></app-property>
+        <div class="is-flex fg-large">
+          <bal-icon name="account" size="large"></bal-icon>
+          <bal-icon name="star-full" size="large"></bal-icon>
+        </div>
       </bal-card-content>
     </bal-card>
+
     <bal-card class="mt-6">
-      <bal-card-title>Event example</bal-card-title>
+      <bal-card-title>Lazy Loading Component Styles</bal-card-title>
       <bal-card-subtitle>
-        A short example how to use the events of our
-        components
+        The default is now that we load the component styles as a CSS file when they are used. Therefore, customization
+        with SASS variables could be broken.
       </bal-card-subtitle>
       <bal-card-content>
-        <app-event></app-event>
+        <bal-stage color="purple">Customized stage with SASS $variable. Should be purple.</bal-stage>
       </bal-card-content>
     </bal-card>
+
     <bal-card class="mt-6">
-      <bal-card-title>Method example</bal-card-title>
+      <bal-card-title>Design Token Reduction</bal-card-title>
       <bal-card-subtitle>
-        A tiny use case of how to call the components methods</bal-card-subtitle>
+        There has been a lot of duplications and aliases, which increased the css file by 66%.
+      </bal-card-subtitle>
       <bal-card-content>
-        <app-method></app-method>
+        <h1 class="title is-1">Typography Size Aliases</h1>
+        <br />
+        <div class="has-background-primary-light">Color Aliases</div>
+        <br />
+        <p class="has-text-invalid">Text-Color Aliases</p>
+        <br />
+        <div class="has-border-active">Border-Color Aliases</div>
+        <br />
+        <div class="has-border-primary has-radius">Radius</div>
+        <br />
+        <div class="has-background-grey-2 has-shadow">Shadow</div>
+        <br />
+        <div class="has-background-yellow-2">
+          <div class="has-background-green-2 p-4 m-6">Spacing</div>
+        </div>
       </bal-card-content>
     </bal-card>
+
     <bal-card class="mt-6">
-      <bal-card-title>Reactive form</bal-card-title>
+      <bal-card-title>Separation of bal-number-input & bal-input
+      </bal-card-title>
+      <bal-card-subtitle>
+        This feature was marked as deprecated at was finally removed. The number input has some dependencies and every
+        time we used a bal-input we also loaded all of that with us.
+      </bal-card-subtitle>
       <bal-card-content>
-        <app-form-component [form]="form"></app-form-component>
-      </bal-card-content>
-    </bal-card>
-    <bal-card class="mt-6">
-      <bal-card-title>Template form</bal-card-title>
-      <bal-card-content>
-        <bal-input [(ngModel)]="value">
-        </bal-input>
-        <bal-text>Value is adapted on: {{value}}</bal-text>
+        <bal-input number-input decimal="2" value="1234.56"></bal-input>
       </bal-card-content>
     </bal-card>
 

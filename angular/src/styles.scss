@@ -1,5 +1,8 @@
-$font-path: '~assets/fonts';
+$font-path: "~assets/fonts";
 
-@import 'node_modules/@baloise/design-system-components/src/styles/global';
+// customization
+$bal-color-purple-3: lime;
+
+@import "@baloise/design-system-components/src/styles/global";
 
 // add custom styles below

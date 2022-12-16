@@ -1,23 +1,44 @@
 <bal-app class="has-sticky-footer">
   <header>
     <bal-navbar>
-      <bal-navbar-brand simple>
-        <bal-logo color="white"></bal-logo>
-        <bal-text bold>Demo</bal-text>
+      <bal-navbar-brand>
       </bal-navbar-brand>
     </bal-navbar>
   </header>
   <main class="container is-compact">
-    <bal-card class="mt-6">
-      <bal-card-title>Property example</bal-card-title>
-      <bal-card-subtitle>
-        A little demonstration how to change properties of our
-        components
-      </bal-card-subtitle>
-      <bal-card-content>
-        <app-property></app-property>
-      </bal-card-content>
+    <bal-card class="mt-large px-large">
+
+      <bal-card-title class="mb-medium">Issue</bal-card-title>
+      <div [formGroup]="formGroup">
+
+        <bal-card-content class="mb-medium py-large" style="background: aliceblue">
+          <bal-heading [level]="'h5'">Example 1</bal-heading>
+          is invalid {{isInvalid('example1') | async}}
+          <bal-field [invalid]="isInvalid('example1') | async">
+            <bal-select
+              *ngIf="options$$ | async as options; else loading"
+              formControlName="example1"
+            >
+              <bal-select-option *ngFor="let option of options" [value]="option.value" [label]="option.label">
+                {{ option.label }}
+              </bal-select-option>
+            </bal-select>
+          </bal-field>
+        </bal-card-content>
+
+        <bal-card-content class="mb-medium py-large" style="background: bisque">
+          <bal-heading [level]="'h5'">Formgroup value</bal-heading>
+          <div class="mt-small p-medium" style="background: bisque">
+            {{ formGroup.value | json}}
+          </div>
+        </bal-card-content>
+      </div>
     </bal-card>
   </main>
   <bal-footer></bal-footer>
 </bal-app>
+
+
+<ng-template #loading>
+  🍷 Please wait my friend!
+</ng-template>

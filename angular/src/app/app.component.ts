@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-components'
 import {BalValidators} from "@baloise/web-app-validators-angular";
@@ -15,7 +15,7 @@ interface NavigationItem {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Welcome';
   language: BalSwissLanguage = 'en';
   form = new FormGroup({
@@ -57,5 +57,17 @@ export class AppComponent {
           break;
       }
     });
+  }
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      console.log("delete second item in navigationItems: ", this.navigationItems)
+      this.navigationItems.splice(1, 1);
+      setTimeout(() => {
+        console.log("add second item in navigationItems:", this.navigationItems)
+        this.navigationItems.splice(1, 0, {hidden: false, label: 'second', 'value': 2, disabled: false})
+      }, 5000);
+    }, 5000);
+
   }
 }

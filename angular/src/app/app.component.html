@@ -46,7 +46,8 @@
     <bal-card class="mt-6">
       <bal-card-title>Method example</bal-card-title>
       <bal-card-subtitle>
-        A tiny use case of how to call the components methods</bal-card-subtitle>
+        A tiny use case of how to call the components methods
+      </bal-card-subtitle>
       <bal-card-content>
         <app-method></app-method>
       </bal-card-content>
@@ -54,16 +55,15 @@
     <bal-card class="mt-6">
       <bal-card-title>Tabs example</bal-card-title>
       <bal-card-subtitle>
-        A tiny use case of how to call tabs component</bal-card-subtitle>
+        A tiny use case of how to call tabs component
+      </bal-card-subtitle>
       <bal-card-content>
         <bal-tabs border="true" fullwidth="true" interface="tabs" [(ngModel)]="navigationModel">
-          <ng-container *ngFor="let item of navigationItems">
-            <bal-tab-item *ngIf="!item.hidden"
-                          [value]="item.value"
-                          [disabled]="item.disabled"
-                          [label]="item.label">
-            </bal-tab-item>
-          </ng-container>
+          <bal-tab-item *ngFor="let item of navigationItems"
+                        [value]="item.value"
+                        [disabled]="item.disabled"
+                        [label]="item.label">
+          </bal-tab-item>
         </bal-tabs>
       </bal-card-content>
     </bal-card>

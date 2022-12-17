@@ -1,7 +1,14 @@
 import {Component} from '@angular/core';
-import {EmailValidator, FormControl, FormGroup, RequiredValidator} from "@angular/forms";
+import {FormControl, FormGroup} from "@angular/forms";
 import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-components'
 import {BalValidators} from "@baloise/web-app-validators-angular";
+
+interface NavigationItem {
+  hidden: boolean;
+  value: number;
+  label: string;
+  disabled: boolean;
+}
 
 @Component({
   selector: 'app-root',
@@ -20,7 +27,15 @@ export class AppComponent {
     birthdate: new FormControl()
   });
 
-  value = 'input template form'
+  navigationItems: NavigationItem[] = [
+    {hidden: false, label: 'first', 'value': 1, disabled: false},
+    {hidden: false, label: 'second', 'value': 2, disabled: false},
+    {hidden: false, label: 'third', 'value': 3, disabled: false},
+    {hidden: false, label: 'forth', 'value': 4, disabled: false}]
+
+  navigationModel = 3;
+
+  value = 2
 
   constructor() {
 

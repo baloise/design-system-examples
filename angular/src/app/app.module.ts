@@ -7,6 +7,7 @@ import { EventComponent } from './event/event.component';
 import { MethodComponent } from './method/method.component';
 import { FormsSubModule } from './forms/forms-sub.module';
 import { SharedModule } from './shared/shared.module';
+import * as balIcons from '@baloise/design-system-icons'
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SharedModule } from './shared/shared.module';
         region: 'CH',
         language: 'en',
         allowedLanguages: ['de', 'fr', 'it', 'en'],
+        icons: { ...balIcons }, // or all the icons at once
       },
     }),
     SharedModule,

@@ -14,7 +14,7 @@ import {
   BalNavbarModule,
   BalRadioModule,
   BalSelectModule,
-  BalStageModule,
+  BalStageModule, BalTabsModule,
   BalToastModule,
 } from '@baloise/design-system-components-angular';
 
@@ -42,6 +42,7 @@ const commonModules = [
   BalCheckboxModule,
   BalRadioModule,
   BalDatepickerModule,
+  BalTabsModule
 ];
 
 @NgModule({

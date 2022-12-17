@@ -1,4 +1,4 @@
-<bal-app class="has-sticky-footer">
+<bal-app mode="sass" class="has-sticky-footer">
   <header>
     <bal-navbar>
       <bal-navbar-brand simple>
@@ -8,7 +8,7 @@
     </bal-navbar>
     <bal-stage color="blue" size="medium">
       <bal-stage-image
-        src-set="https://www.baloise.com/.imaging/mte/baloise-theme/2880/dam/baloise-com/images/ueber-uns/wer-wir-sind/bilder-logos/frau-fotoapparat.jpg/jcr:content/frau-fotoapparat.jpg"
+        src-set="https://i.picsum.photos/id/703/1280/720.jpg?hmac=sICuW9WVQ1Ul6j4mTHDPbj43bHqe062gU35Blq2V-MI"
       ></bal-stage-image>
       <bal-stage-body>
         <div class="container is-compact">
@@ -49,6 +49,22 @@
         A tiny use case of how to call the components methods</bal-card-subtitle>
       <bal-card-content>
         <app-method></app-method>
+      </bal-card-content>
+    </bal-card>
+    <bal-card class="mt-6">
+      <bal-card-title>Tabs example</bal-card-title>
+      <bal-card-subtitle>
+        A tiny use case of how to call tabs component</bal-card-subtitle>
+      <bal-card-content>
+        <bal-tabs border="true" fullwidth="true" interface="tabs" [(ngModel)]="navigationModel">
+          <ng-container *ngFor="let item of navigationItems">
+            <bal-tab-item *ngIf="!item.hidden"
+                          [value]="item.value"
+                          [disabled]="item.disabled"
+                          [label]="item.label">
+            </bal-tab-item>
+          </ng-container>
+        </bal-tabs>
       </bal-card-content>
     </bal-card>
     <bal-card class="mt-6">

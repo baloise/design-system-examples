@@ -11,6 +11,8 @@ import {
   BalCardTitle,
   BalCardSubtitle,
   BalCardContent,
+  BalText,
+  BalButton,
 } from "@baloise/design-system-components-react";
 import {
   onBalConfigChange,
@@ -43,6 +45,7 @@ function App() {
       }
     });
   });
+  const [foo, setFoo] = React.useState<string | undefined>("foo");
 
   return (
     <BalApp class="has-sticky-footer has-background">
@@ -64,6 +67,12 @@ function App() {
         </BalStage>
       </header>
       <main className="container is-compact">
+        <BalCard class="mt-6">
+          <BalText>{foo}</BalText>
+          <BalButton onClick={() => setFoo(undefined)}>Set Undefined</BalButton>
+          <BalButton onClick={() => setFoo("Bar")}>Set Bar</BalButton>
+          <BalText>{undefined}</BalText>
+        </BalCard>
         <BalCard class="mt-6">
           <BalCardTitle>Property example</BalCardTitle>
           <BalCardSubtitle>

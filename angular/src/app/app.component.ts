@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-components'
 import {BalValidators} from "@baloise/web-app-validators-angular";
 
@@ -18,13 +18,13 @@ interface NavigationItem {
 export class AppComponent implements OnInit {
   title = 'Welcome';
   language: BalSwissLanguage = 'en';
-  form = new FormGroup({
-    name: new FormControl('Example name'),
-    radioButton: new FormControl('yes'),
-    email: new FormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
-    status: new FormControl('Hans Muster'),
-    correct: new FormControl(true),
-    birthdate: new FormControl()
+  form = new UntypedFormGroup({
+    name: new UntypedFormControl('Example name'),
+    radioButton: new UntypedFormControl('yes'),
+    email: new UntypedFormControl(null, [BalValidators.isRequired(), BalValidators.isMinLength(4), BalValidators.isEmail()]),
+    status: new UntypedFormControl('Hans Muster'),
+    correct: new UntypedFormControl(true),
+    birthdate: new UntypedFormControl()
   });
 
   navigationItems: NavigationItem[] = [

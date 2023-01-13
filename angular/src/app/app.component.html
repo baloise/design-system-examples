@@ -1,68 +1,26 @@
 <bal-app class="has-sticky-footer">
-  <header>
-    <bal-navbar>
-      <bal-navbar-brand simple>
-        <bal-logo color="white"></bal-logo>
-        <bal-text bold>Demo</bal-text>
-      </bal-navbar-brand>
-    </bal-navbar>
-    <bal-stage color="blue" size="medium">
-      <bal-stage-image
-        src-set="https://www.baloise.com/.imaging/mte/baloise-theme/2880/dam/baloise-com/images/ueber-uns/wer-wir-sind/bilder-logos/frau-fotoapparat.jpg/jcr:content/frau-fotoapparat.jpg"
-      ></bal-stage-image>
-      <bal-stage-body>
-        <div class="container is-compact">
-          <bal-heading space="none" data-testid="welcome-title">{{
-            title
-            }}</bal-heading>
-          <bal-heading space="none" subtitle level="h2">
-            To the Baloise Design System
-          </bal-heading>
-        </div>
-      </bal-stage-body>
-    </bal-stage>
-  </header>
+
   <main class="container is-compact">
-    <bal-card class="mt-6">
-      <bal-card-title>Property example</bal-card-title>
-      <bal-card-subtitle>
-        A little demonstration how to change properties of our
-        components
-      </bal-card-subtitle>
+
+    <bal-card class="my-large">
+      <bal-card-title>Example 1</bal-card-title>
       <bal-card-content>
-        <app-property></app-property>
+      <bal-field>
+        <bal-field-label [required]="true">label 1</bal-field-label>
+        <bal-field-control><bal-radio-group><bal-radio [invalid]="false" [value]="1">test 1</bal-radio></bal-radio-group></bal-field-control>
+        <bal-field-message color="danger"><span >my little error 1</span></bal-field-message>
+      </bal-field>
       </bal-card-content>
     </bal-card>
-    <bal-card class="mt-6">
-      <bal-card-title>Event example</bal-card-title>
-      <bal-card-subtitle>
-        A short example how to use the events of our
-        components
-      </bal-card-subtitle>
+
+    <bal-card class="my-large">
+      <bal-card-title>Example 2</bal-card-title>
       <bal-card-content>
-        <app-event></app-event>
-      </bal-card-content>
-    </bal-card>
-    <bal-card class="mt-6">
-      <bal-card-title>Method example</bal-card-title>
-      <bal-card-subtitle>
-        A tiny use case of how to call the components methods</bal-card-subtitle>
-      <bal-card-content>
-        <app-method></app-method>
-      </bal-card-content>
-    </bal-card>
-    <bal-card class="mt-6">
-      <bal-card-title>Reactive form</bal-card-title>
-      <bal-card-content>
-        <app-form-component [form]="form"></app-form-component>
-      </bal-card-content>
-    </bal-card>
-    <bal-card class="mt-6">
-      <bal-card-title>Template form</bal-card-title>
-      <bal-card-content>
-        <bal-input [(ngModel)]="value">
-        </bal-input>
-        <bal-text>Value is adapted on: {{value}}</bal-text>
+        <bal-field>
+          <bal-field-label [required]="true">label 2</bal-field-label>
+          <bal-field-control><bal-input formControlName="email"></bal-input></bal-field-control>
+          <bal-field-message color="danger"><span >my little error 2</span></bal-field-message>
+        </bal-field>
       </bal-card-content>
     </bal-card>
 

@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {FormGroup} from "@angular/forms";
+import {UntypedFormGroup} from "@angular/forms";
 import {formatDateString} from "@baloise/web-app-utils";
 
 @Component({
@@ -17,7 +17,7 @@ export class FormComponent implements OnInit {
   todayDateDatePickerValue = formatDateString(new Date(new Date().setFullYear(this.todayDate.getFullYear() - 25)));
 
   @Input()
-  form?: FormGroup
+  form?: UntypedFormGroup
 
   ngOnInit(): void {
   }

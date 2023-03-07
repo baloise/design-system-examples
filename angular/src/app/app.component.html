@@ -1,29 +1,23 @@
 <bal-app mode="sass" class="has-sticky-footer">
   <header>
     <bal-navbar>
-      <bal-navbar-brand simple>
-        <bal-logo color="white"></bal-logo>
-        <bal-text bold>Demo</bal-text>
-      </bal-navbar-brand>
+      <bal-navbar-brand href="/" target="_blank">Demo</bal-navbar-brand>
     </bal-navbar>
-    <bal-stage color="blue" size="medium">
-      <bal-stage-image
-        src-set="https://i.picsum.photos/id/703/1280/720.jpg?hmac=sICuW9WVQ1Ul6j4mTHDPbj43bHqe062gU35Blq2V-MI"
-      ></bal-stage-image>
+    <bal-stage color="green" shape>
       <bal-stage-body>
-        <div class="container is-compact">
-          <bal-heading space="none" data-testid="welcome-title">{{
+        <div class="container is-wide">
+          <bal-heading data-testid="welcome-title">{{
             title
             }}</bal-heading>
-          <bal-heading space="none" subtitle level="h2">
+          <bal-heading subtitle level="h2">
             To the Baloise Design System
           </bal-heading>
         </div>
       </bal-stage-body>
     </bal-stage>
   </header>
-  <main class="container is-compact">
-    <bal-card class="mt-6">
+  <main class="container is-wide">
+    <bal-card class="mt-large">
       <bal-card-title>Property example</bal-card-title>
       <bal-card-subtitle>
         A little demonstration how to change properties of our
@@ -33,7 +27,7 @@
         <app-property></app-property>
       </bal-card-content>
     </bal-card>
-    <bal-card class="mt-6">
+    <bal-card class="mt-large">
       <bal-card-title>Event example</bal-card-title>
       <bal-card-subtitle>
         A short example how to use the events of our
@@ -43,7 +37,7 @@
         <app-event></app-event>
       </bal-card-content>
     </bal-card>
-    <bal-card class="mt-6">
+    <bal-card class="mt-large">
       <bal-card-title>Method example</bal-card-title>
       <bal-card-subtitle>
         A tiny use case of how to call the components methods
@@ -52,7 +46,7 @@
         <app-method></app-method>
       </bal-card-content>
     </bal-card>
-    <bal-card class="mt-6">
+    <bal-card class="mt-large">
       <bal-card-title>Tabs example</bal-card-title>
       <bal-card-subtitle>
         A tiny use case of how to call tabs component
@@ -67,13 +61,13 @@
         </bal-tabs>
       </bal-card-content>
     </bal-card>
-    <bal-card class="mt-6">
+    <bal-card class="mt-large">
       <bal-card-title>Reactive form</bal-card-title>
       <bal-card-content>
         <app-form-component [form]="form"></app-form-component>
       </bal-card-content>
     </bal-card>
-    <bal-card class="mt-6">
+    <bal-card class="mt-large">
       <bal-card-title>Template form</bal-card-title>
       <bal-card-content>
         <bal-input [(ngModel)]="value">

@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 import {BalConfigState, BalSwissLanguage, onBalConfigChange} from '@baloise/design-system-components'
 import {BalValidators} from "@baloise/web-app-validators-angular";
+import { BalModalService } from '@baloise/design-system-components-angular'
+import { ModalComponent } from './modal/modal.component'
 
 interface NavigationItem {
   hidden: boolean;
@@ -34,10 +36,10 @@ export class AppComponent implements OnInit {
     {hidden: false, label: 'forth', 'value': 4, disabled: false}]
 
   navigationModel = 3;
-
   value = 2
+  modal!: HTMLBalModalElement
 
-  constructor() {
+  constructor(private modalService: BalModalService) {
 
     onBalConfigChange((config: BalConfigState) => {
       this.language = config.language as BalSwissLanguage;
@@ -68,6 +70,26 @@ export class AppComponent implements OnInit {
         this.navigationItems.splice(1, 0, {hidden: false, label: 'second', 'value': 2, disabled: false})
       }, 5000);
     }, 5000);
+  }
 
+  async openModal() {
+    this.modal = await this.modalService.create({
+      component: ModalComponent,
+      componentProps: {
+        firstName: 'Peter',
+        lastName: 'Parker',
+      },
+    })
+    await this.modal.present()
+
+    // Collect the data from the modal through the dismiss event
+    const { data } = await this.modal.onWillDismiss()
+
+    // React onDidDismiss
+    await this.modal.onDidDismiss()
+  }
+
+  closeModal() {
+    this.modal.dismiss()
   }
 }

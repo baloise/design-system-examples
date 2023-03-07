@@ -4,6 +4,7 @@ import {BalCoreModule, BalTextModule} from '@baloise/design-system-components-an
 import { AppComponent } from './app.component';
 import { PropertyComponent } from './property/property.component';
 import { EventComponent } from './event/event.component';
+import { ModalComponent } from './modal/modal.component';
 import { MethodComponent } from './method/method.component';
 import { FormsSubModule } from './forms/forms-sub.module';
 import { SharedModule } from './shared/shared.module';
@@ -15,6 +16,7 @@ import * as balIcons from '@baloise/design-system-icons'
     PropertyComponent,
     EventComponent,
     MethodComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

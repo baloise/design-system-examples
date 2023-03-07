@@ -21,5 +21,5 @@ function chooseTennis() {
     <BalSelectOption label="Soccer" value="soccer">Soccer</BalSelectOption>
     <BalSelectOption label="Other" value="other">Other</BalSelectOption>
   </BalSelect>
-  <BalButton class="mt-4" @click="chooseTennis()">Choose Tennis</BalButton>
+  <BalButton class="mt-normal" @click="chooseTennis()">Choose Tennis</BalButton>
 </template>

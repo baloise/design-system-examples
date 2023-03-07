@@ -25,7 +25,7 @@ function MethodComponent() {
           Other
         </BalSelectOption>
       </BalSelect>
-      <BalButton class="mt-4" onClick={() => chooseTennis()}>
+      <BalButton class="mt-normal" onClick={() => chooseTennis()}>
         Choose Tennis
       </BalButton>
     </div>

@@ -64,7 +64,7 @@ function App() {
         </BalStage>
       </header>
       <main className="container is-compact">
-        <BalCard class="mt-6">
+        <BalCard class="mt-large">
           <BalCardTitle>Property example</BalCardTitle>
           <BalCardSubtitle>
             A little demonstration how to change properties of our components
@@ -74,7 +74,7 @@ function App() {
           </BalCardContent>
         </BalCard>
 
-        <BalCard class="mt-6">
+        <BalCard class="mt-large">
           <BalCardTitle>Event example</BalCardTitle>
           <BalCardSubtitle>
             A short example how to use the events of our components
@@ -84,7 +84,7 @@ function App() {
           </BalCardContent>
         </BalCard>
 
-        <BalCard class="mt-6">
+        <BalCard class="mt-large">
           <BalCardTitle>Method example</BalCardTitle>
           <BalCardSubtitle>
             A tiny use case of how to call the components methods

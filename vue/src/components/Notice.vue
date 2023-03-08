@@ -11,7 +11,7 @@ const props = defineProps({
 
 const myName = ref<string | undefined>();
 
-function updateName(value?: string) {
+function updateName(value?: any) {
   myName.value = value;
 }
 </script>

@@ -1,16 +1,13 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import {
-  BalInputModule,
-  BalTextModule,
-} from '@baloise/design-system-components-angular';
+import { BaloiseDesignSystemModule } from '@baloise/design-system-components-angular';
 import { EventComponent } from './event.component';
 
 describe('EventComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [EventComponent],
-      imports: [BalInputModule, BalTextModule],
+      imports: [BaloiseDesignSystemModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });

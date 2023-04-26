@@ -5,18 +5,14 @@
     </bal-navbar>
     <bal-stage color="green" shape>
       <bal-stage-body>
-        <div class="container is-wide">
-          <bal-heading data-testid="welcome-title">{{
-            title
-            }}</bal-heading>
-          <bal-heading subtitle level="h2">
-            To the Baloise Design System
-          </bal-heading>
-        </div>
+        <bal-heading data-testid="welcome-title">{{ title }}</bal-heading>
+        <bal-heading subtitle level="h2">
+          To the Baloise Design System
+        </bal-heading>
       </bal-stage-body>
     </bal-stage>
   </header>
-  <main class="container is-wide">
+  <main class="container">
     <bal-card class="mt-large">
       <bal-card-title>Property example</bal-card-title>
       <bal-card-subtitle>
@@ -53,10 +49,8 @@
       </bal-card-subtitle>
       <bal-card-content>
         <bal-tabs border="true" fullwidth="true" interface="tabs" [(ngModel)]="navigationModel">
-          <bal-tab-item *ngFor="let item of navigationItems"
-                        [value]="item.value"
-                        [disabled]="item.disabled"
-                        [label]="item.label">
+          <bal-tab-item *ngFor="let item of navigationItems" [value]="item.value" [disabled]="item.disabled"
+            [label]="item.label">
           </bal-tab-item>
         </bal-tabs>
       </bal-card-content>

@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {BalCoreModule, BalTextModule} from '@baloise/design-system-components-angular';
+import { BaloiseDesignSystemModule } from '@baloise/design-system-components-angular';
 import { AppComponent } from './app.component';
 import { PropertyComponent } from './property/property.component';
 import { EventComponent } from './event/event.component';
@@ -8,7 +8,7 @@ import { ModalComponent } from './modal/modal.component';
 import { MethodComponent } from './method/method.component';
 import { FormsSubModule } from './forms/forms-sub.module';
 import { SharedModule } from './shared/shared.module';
-import * as balIcons from '@baloise/design-system-icons'
+import * as balIcons from '@baloise/design-system-icons';
 
 @NgModule({
   declarations: [
@@ -16,11 +16,11 @@ import * as balIcons from '@baloise/design-system-icons'
     PropertyComponent,
     EventComponent,
     MethodComponent,
-    ModalComponent
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
-    BalCoreModule.forRoot({
+    BaloiseDesignSystemModule.forRoot({
       defaults: {
         region: 'CH',
         language: 'en',
@@ -30,7 +30,6 @@ import * as balIcons from '@baloise/design-system-icons'
     }),
     SharedModule,
     FormsSubModule,
-    BalTextModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BalInput, BalText } from "@baloise/design-system-components-react";
 
 function EventComponent() {
-  const [myName, setMyName] = useState<string | undefined>();
+  const [myName, setMyName] = useState<BalEvents.BalInputInputDetail>();
 
   return (
     <div>

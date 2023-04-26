@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@baloise/design-system-components-react": "^12.13.0",
+    "@baloise/design-system-components-react": "0.0.0-snapshot-20230426115952",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

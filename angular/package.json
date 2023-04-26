@@ -20,7 +20,7 @@
     "@angular/platform-browser": "^15.2.1",
     "@angular/platform-browser-dynamic": "^15.2.1",
     "@angular/router": "^15.2.1",
-    "@baloise/design-system-components-angular": "^12.13.0",
+    "@baloise/design-system-components-angular": "0.0.0-snapshot-20230426131950",
     "@baloise/web-app-unsupported-browsers": "^3.0.0",
     "@baloise/web-app-validators-angular": "^3.6.1",
     "rxjs": "~7.8.0",

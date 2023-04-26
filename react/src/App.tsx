@@ -52,18 +52,16 @@ function App() {
         </BalNavbar>
         <BalStage color="purple" size="small">
           <BalStageBody>
-            <div className="container is-compact">
-              <BalHeading space="none" data-testid="welcome-title">
-                {title}
-              </BalHeading>
-              <BalHeading space="none" subtitle level="h2">
-                To the Baloise Design System
-              </BalHeading>
-            </div>
+            <BalHeading space="none" data-testid="welcome-title">
+              {title}
+            </BalHeading>
+            <BalHeading space="none" subtitle level="h2">
+              To the Baloise Design System
+            </BalHeading>
           </BalStageBody>
         </BalStage>
       </header>
-      <main className="container is-compact">
+      <main className="container">
         <BalCard class="mt-large">
           <BalCardTitle>Property example</BalCardTitle>
           <BalCardSubtitle>

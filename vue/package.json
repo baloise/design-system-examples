@@ -11,7 +11,7 @@
     "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-fonts/lib/* public/assets/fonts"
   },
   "dependencies": {
-    "@baloise/design-system-components-vue": "^12.8.2",
+    "@baloise/design-system-components-vue": "^13.6.2",
     "vue": "^3.2.38"
   },
   "devDependencies": {

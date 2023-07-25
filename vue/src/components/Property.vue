@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import type { Props } from "@baloise/design-system-components";
 import {
   BalButton,
   BalButtonGroup,
 } from "@baloise/design-system-components-vue";
 
-const myColor = ref<Props.BalButtonColor>("info");
+const myColor = ref<BalProps.BalButtonColor>("info");
 </script>
 
 <template>

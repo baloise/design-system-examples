@@ -48,7 +48,7 @@
         A tiny use case of how to call tabs component
       </bal-card-subtitle>
       <bal-card-content>
-        <bal-tabs border="true" fullwidth="true" interface="tabs" [(ngModel)]="navigationModel">
+        <bal-tabs border="true" fullwidth="true" interface="tabs" [value]="navigationModel">
           <bal-tab-item *ngFor="let item of navigationItems" [value]="item.value" [disabled]="item.disabled"
             [label]="item.label">
           </bal-tab-item>
@@ -76,7 +76,6 @@
         <bal-button (click)="openModal()">Open Modal</bal-button>
       </bal-card-content>
     </bal-card>
-
   </main>
   <bal-footer></bal-footer>
 </bal-app>

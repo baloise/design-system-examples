@@ -1,81 +1,13 @@
 <bal-app class="has-sticky-footer">
   <header>
-    <bal-navbar>
-      <bal-navbar-brand href="/" target="_blank">Demo</bal-navbar-brand>
-    </bal-navbar>
-    <bal-stage color="green" shape>
-      <bal-stage-body>
-        <bal-heading data-testid="welcome-title">{{ title }}</bal-heading>
-        <bal-heading subtitle level="h2">
-          To the Baloise Design System
-        </bal-heading>
-      </bal-stage-body>
-    </bal-stage>
+    <!-- Header content -->
   </header>
   <main class="container">
-    <bal-card class="mt-large">
-      <bal-card-title>Property example</bal-card-title>
-      <bal-card-subtitle>
-        A little demonstration how to change properties of our
-        components
-      </bal-card-subtitle>
-      <bal-card-content>
-        <app-property></app-property>
-      </bal-card-content>
-    </bal-card>
-    <bal-card class="mt-large">
-      <bal-card-title>Event example</bal-card-title>
-      <bal-card-subtitle>
-        A short example how to use the events of our
-        components
-      </bal-card-subtitle>
-      <bal-card-content>
-        <app-event></app-event>
-      </bal-card-content>
-    </bal-card>
-    <bal-card class="mt-large">
-      <bal-card-title>Method example</bal-card-title>
-      <bal-card-subtitle>
-        A tiny use case of how to call the components methods
-      </bal-card-subtitle>
-      <bal-card-content>
-        <app-method></app-method>
-      </bal-card-content>
-    </bal-card>
-    <bal-card class="mt-large">
-      <bal-card-title>Tabs example</bal-card-title>
-      <bal-card-subtitle>
-        A tiny use case of how to call tabs component
-      </bal-card-subtitle>
-      <bal-card-content>
-        <bal-tabs border="true" fullwidth="true" interface="tabs" [value]="navigationModel">
-          <bal-tab-item *ngFor="let item of navigationItems" [value]="item.value" [disabled]="item.disabled"
-            [label]="item.label">
-          </bal-tab-item>
-        </bal-tabs>
-      </bal-card-content>
-    </bal-card>
-    <bal-card class="mt-large">
-      <bal-card-title>Reactive form</bal-card-title>
-      <bal-card-content>
-        <app-form-component [form]="form"></app-form-component>
-      </bal-card-content>
-    </bal-card>
-    <bal-card class="mt-large">
-      <bal-card-title>Template form</bal-card-title>
-      <bal-card-content>
-        <bal-input [(ngModel)]="value">
-        </bal-input>
-        <bal-text>Value is adapted on: {{value}}</bal-text>
-      </bal-card-content>
-    </bal-card>
-
-    <bal-card class="mt-large">
-      <bal-card-title>Modal example</bal-card-title>
-      <bal-card-content>
-        <bal-button (click)="openModal()">Open Modal</bal-button>
-      </bal-card-content>
-    </bal-card>
+    <!-- Your application content -->
+    <bal-heading>Hello World!</bal-heading>
+    <bal-button>Button</bal-button>
   </main>
-  <bal-footer></bal-footer>
+  <bal-footer>
+    <!-- Footer content -->
+  </bal-footer>
 </bal-app>

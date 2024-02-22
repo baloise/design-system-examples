@@ -1,7 +1,6 @@
-// change variable before the import
-$font-path: '~assets/fonts';
+/* You can add global styles to this file, and also import other style files */
 
-// SASS mixins and variables (optional)
+// SASS mixins and variables
 @import '@baloise/design-system-css/sass/mixins';
 
 // Resets CSS for all browser
@@ -9,20 +8,16 @@ $font-path: '~assets/fonts';
 @import '@baloise/design-system-css/css/structure';
 
 // Custom font faces
-@import '@baloise/design-system-css/sass/font';
+@import '@baloise/design-system-css/css/font';
 
 // Core CSS, always required
 @import '@baloise/design-system-css/css/core';
-
-// Deprecated styles will be removed with the next breaking version (optional)
-@import '@baloise/design-system-css/sass/legacy';
 
 // CSS utilities classes (optional)
 @import '@baloise/design-system-css/css/border';
 @import '@baloise/design-system-css/css/color';
 @import '@baloise/design-system-css/css/display';
 @import '@baloise/design-system-css/css/flex';
-@import '@baloise/design-system-css/css/grid';
 @import '@baloise/design-system-css/css/opacity';
 @import '@baloise/design-system-css/css/radius';
 @import '@baloise/design-system-css/css/shadow';

@@ -9,26 +9,22 @@ import { provideHttpClient } from '@angular/common/http';
 import { TranslocoHttpLoader } from './transloco-loader';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), 
+  providers: [provideRouter(routes),
     provideBaloiseDesignSystem({
       defaults: {
         region: 'CH',
       }
-    }), 
-    provideBaloiseDesignSystem({
-      defaults: {
-        region: 'CH',
-      }
-    }), 
+    }),
+
     {
       provide: APP_INITIALIZER,
       useFactory: initializeI18n,
       multi: true,
       deps: [TranslocoService, BalConfigService],
     }, provideHttpClient(), provideTransloco({
-        config: { 
-          availableLangs: ['N'],
-          defaultLang: 'N',
+        config: {
+          availableLangs: ['de'],
+          defaultLang: 'de',
           // Remove this option if your application doesn't support changing language in runtime.
           reRenderOnLangChange: true,
           prodMode: !isDevMode(),

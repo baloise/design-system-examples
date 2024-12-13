@@ -1,6 +1,13 @@
-# Vue 3 + Typescript + Vite
+# Vue 3 + Typescript + Vite Design System Example
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Install dependecies
+
+`npm install`
+
+## Development server
+
+Run `npm start` for a dev server. Navigate to `http://localhost:5173/`.
+
 
 ## Recommended IDE Setup
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="https://www.baloise.com/favicon.ico" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,30 +15,33 @@
     <bal-app class="has-sticky-footer">
       <header>
         <bal-navbar>
-          <bal-navbar-brand simple>
-            <bal-logo color="white"></bal-logo>
-            <bal-text bold>Demo</bal-text>
-          </bal-navbar-brand>
+          <bal-navbar-brand>Welcome to...</bal-navbar-brand>
         </bal-navbar>
-        <bal-stage color="blue" size="medium">
-          <bal-stage-image
-            src="https://www.baloise.com/.imaging/mte/baloise-theme/2880/dam/baloise-com/images/ueber-uns/wer-wir-sind/bilder-logos/frau-fotoapparat.jpg/jcr:content/frau-fotoapparat.jpg"
-          ></bal-stage-image>
-          <bal-stage-body>
-            <div class="container is-compact">
-              <bal-heading space="none" data-testid="welcome-title">
-                <span id="welcome-title">Welcomes</span>
-              </bal-heading>
-              <bal-heading space="none" subtitle level="h2">
-                To the Baloise Design System
-              </bal-heading>
-            </div>
-          </bal-stage-body>
-        </bal-stage>
       </header>
-      <main class="container is-compact"></main>
-      <bal-footer></bal-footer>
-    </bal-app>
+      <bal-stage color="green" shape="true">
+        <bal-stage-image src-set="https://fastly.picsum.photos/id/626/1280/720.jpg?hmac=pHWhzQeCr1Zq8_NquZJ51qZ0xXa4psCZpoeJbaUbkWM"></bal-stage-image>
+        <bal-stage-body>
+          <bal-heading class="mb-xx-large" space="none" shadow="true" inverted="true">The Baloise Design System</bal-heading>
+          <bal-heading space="none" level="h5" shadow="true" inverted="true">Reading the documentation</bal-heading>
+          <bal-text inverted="true" shadow="true">
+            might be a next good thing to do. 😉
+          </bal-text>
+          <bal-button-group class="mt-x-small">
+            <bal-button shadow="true" inverted="true" href="https://github.com/baloise/design-system-examples">Examples repository</bal-button>
+            <bal-button shadow="true" inverted="true" href="https://design.baloise.dev/" color="link">Design System documentation</bal-button>
+          </bal-button-group>
+        </bal-stage-body>
+      </bal-stage>
+      <main>
+        <div class="container my-large">
+          <h1 class="title">¡Hasta la vista!</h1>
+          <!-- Page content -->
+        </div>
+      </main>
+      <bal-footer>
+        <!-- Footer content -->
+      </bal-footer>
+      </bal-app>
 
     <script
       type="module"

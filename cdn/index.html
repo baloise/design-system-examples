@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="https://www.baloise.com/favicon.ico" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
+    <title>Baloise Design System</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@baloise/design-system-components/dist/design-system-components/design-system-components.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@baloise/design-system-fonts/lib/fonts.cdn.css"
-    />
+  </head>
+  <body>
+    <bal-app class="has-sticky-footer">
+      <header>
+        <bal-navbar>
+          <bal-navbar-brand>Welcome to...</bal-navbar-brand>
+        </bal-navbar>
+      </header>
+      <bal-stage color="green" shape="true">
+        <bal-stage-image src-set="https://fastly.picsum.photos/id/626/1280/720.jpg?hmac=pHWhzQeCr1Zq8_NquZJ51qZ0xXa4psCZpoeJbaUbkWM"></bal-stage-image>
+        <bal-stage-body>
+          <bal-heading class="mb-xx-large" space="none" shadow="true" inverted="true">The Baloise Design System</bal-heading>
+          <bal-heading space="none" level="h5" shadow="true" inverted="true">Reading the documentation</bal-heading>
+          <bal-text inverted="true" shadow="true">
+            might be a next good thing to do. 😉
+          </bal-text>
+          <bal-button-group class="mt-x-small">
+            <bal-button shadow="true" inverted="true" href="https://github.com/baloise/design-system-examples">Examples repository</bal-button>
+            <bal-button shadow="true" inverted="true" href="https://design.baloise.dev/" color="link">Design System documentation</bal-button>
+          </bal-button-group>
+        </bal-stage-body>
+      </bal-stage>
+      <main>
+        <div class="container my-large">
+          <h1 class="title">¡Hasta la vista!</h1>
+          <!-- Page content -->
+        </div>
+      </main>
+      <bal-footer>
+        <!-- Footer content -->
+      </bal-footer>
+      </bal-app>
+
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/@baloise/design-system-components/dist/design-system-components/design-system-components.esm.js"
@@ -22,10 +51,6 @@
       nomodule
       src="https://cdn.jsdelivr.net/npm/@baloise/design-system-components/dist/design-system-components/design-system-components.js"
     ></script>
-  </head>
-  <body>
-    <bal-app>
-      <bal-heading>Hello World</bal-heading>
-    </bal-app>
   </body>
-</html>
+  </html>
+  
